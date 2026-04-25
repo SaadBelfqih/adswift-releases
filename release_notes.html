@@ -35,14 +35,83 @@ main {
   margin: 0 auto;
   padding: 48px 32px 96px;
 }
-h1 { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 32px; }
-.intro { color: var(--muted); }
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 32px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 40px 0 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+}
+h3 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 24px 0 8px;
+}
+ul {
+  padding-left: 20px;
+  margin: 0 0 16px;
+}
+li { margin: 4px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+blockquote {
+  color: var(--muted);
+  border-left: 3px solid var(--rule);
+  margin: 16px 0;
+  padding: 4px 16px;
+}
+code {
+  background: var(--rule);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
 </style>
 </head>
 <body>
 <main>
-  <h1>ADSwift — Release Notes</h1>
-  <p class="intro">Release notes will appear here once the first version ships.</p>
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to ADSwift will be documented in this file.</p>
+<p>The format is based on <a
+href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>, and
+this project adheres to <a
+href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<blockquote>
+<p><strong>Pre-1.0 policy:</strong> minor bumps for features and notable
+changes, patch bumps for bug fixes. <code>1.0.0</code> will be cut at
+the public launch.</p>
+</blockquote>
+<h2 id="unreleased">[Unreleased]</h2>
+<h2 id="section">[0.1.0] - 2026-04-25</h2>
+<h3 id="beta">Beta</h3>
+<p>This is a beta release of ADSwift. The app is functional but still
+under active development — expect rough edges and breaking changes
+between versions. Feedback is very welcome via <strong>Help → Send
+Feedback…</strong> (⌘/).</p>
+<h2 id="section-1">[0.1.0] - 2026-04-21</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Initial public build of ADSwift.</li>
+<li>Apple Search Ads campaign management: campaigns, ad groups,
+keywords, negative keywords.</li>
+<li>Geo map for campaign visualisation.</li>
+<li>Campaign assistant chat panel powered by on-device Foundation Models
+and OpenAI session.</li>
+<li>RevenueCat revenue store for per-app revenue telemetry.</li>
+<li>In-app update notifier via Sparkle 2 — the app now checks for
+updates on launch and every 24 hours, and exposes a <strong>Check for
+Updates…</strong> menu item.</li>
+</ul>
 </main>
 </body>
 </html>

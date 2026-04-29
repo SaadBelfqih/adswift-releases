@@ -14,59 +14,41 @@
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Add App</strong> flow — track apps in the sidebar before any
-campaigns exist for them. The sidebar’s primary CTA now flips between
-<strong>Connect to Apple Ads</strong> (when credentials aren’t set) and
-<strong>Add App</strong> (once you’re connected).</li>
-<li><strong>Search terms table</strong> — see the actual search queries
-that triggered your ads, with a synthesized <strong>(Low volume
-terms)</strong> aggregate row that backfills the totals Apple suppresses
-for privacy.</li>
-<li><strong>Spend sparkline column</strong> on tables for at-a-glance
-trend without opening a detail view.</li>
-<li><strong>Recent searches</strong> dropdown when filtering
-tables.</li>
-<li><strong>Bulk re-enable</strong> workflow for paused ad groups
+<li><strong>Add App</strong> — track an app in the sidebar before you
+have any campaigns for it. The sidebar’s primary button now switches
+between <strong>Connect to Apple Ads</strong> and <strong>Add
+App</strong> depending on whether you’ve connected.</li>
+<li><strong>Search Terms</strong> table — see the actual queries that
+triggered your ads, with a <strong>(Low volume terms)</strong> row that
+backfills the totals Apple suppresses for privacy.</li>
+<li><strong>Spend sparklines</strong> on tables for at-a-glance trend
+without opening a detail view.</li>
+<li><strong>Recent searches</strong> dropdown in the table filter
+field.</li>
+<li><strong>Bulk re-enable</strong> for paused ad groups
 (<code>Enable Paused Ad Groups…</code> sheet).</li>
 <li><strong>Locations picker</strong> for campaign geo targeting.</li>
-<li><strong>Product page picker</strong> for ad-group-level App Store
-product page selection.</li>
-<li><strong>Inline keyword suggestions</strong> inside the keyword and
-bulk-keyword forms — the standalone Suggestions sheet is gone.</li>
-<li><strong>Tag-collision pre-flight</strong> in <code>release.sh</code>
-— fails fast if a release tag already exists rather than
-half-pushing.</li>
+<li><strong>Product page picker</strong> at the ad-group level.</li>
+<li><strong>Inline keyword suggestions</strong> in the keyword and
+bulk-add forms (the standalone Suggestions sheet is gone).</li>
 </ul>
 <h3 id="changed">Changed</h3>
 <ul>
-<li><strong>Mock-data fallback removed.</strong> A fresh install with no
-Apple Ads credentials now opens the connection sheet directly instead of
-populating with mock fixtures.</li>
-<li><strong>Lazy loads keep running across navigation.</strong> Ad-group
-and keyword fetches survive the user navigating between table and detail
-views mid-fetch — initiated by <code>DataSourceManager</code> itself
-rather than the calling view.</li>
-<li><strong>Paywall gating consistency.</strong> Sidebar, content
-overlay, and per-row gates now all route through
-<code>LicenseStore.contentIsGated(in:)</code>. Debug mode is fully
-unlocked (mock fixtures, nothing real to gate); live mode gates as
-before.</li>
-<li><strong>RevenueCat keyword scoping</strong> now uses ad-group
-<strong>name</strong> instead of numeric ID — RC attribution stores the
-name, and the parameter labels finally agree.</li>
-<li><strong>Chat providers narrowed</strong> to Claude Code, Codex, and
-OpenAI-compatible HTTP endpoints (OpenRouter, etc.) — see
-<em>Removed</em> below.</li>
-</ul>
-<h3 id="removed">Removed</h3>
-<ul>
-<li><strong>Direct OpenAI and Anthropic chat providers.</strong> Use the
-<strong>OpenAI-Compatible</strong> provider with their endpoint URL
+<li>A fresh install with no Apple Ads credentials now opens the
+<strong>Connect</strong> sheet immediately instead of populating the app
+with mock fixtures.</li>
+<li>Switching between a table and its detail view mid-fetch no longer
+cancels the load.</li>
+<li>Chat providers narrowed to <strong>Claude Code</strong>,
+<strong>Codex</strong>, and <strong>OpenAI-Compatible</strong> HTTP
+endpoints (OpenRouter and similar). The direct OpenAI and Anthropic
+providers were removed — use OpenAI-Compatible with their endpoint URL
 instead.</li>
-<li><strong>Standalone Keyword Suggestions sheet.</strong> Folded into
-the keyword form.</li>
-<li><strong><code>AppStoreHintsService</code>.</strong> Responsibilities
-folded into <code>AppInfoService</code>.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Per-keyword RevenueCat revenue now matches reliably across ad groups
+(was occasionally missing or mis-scoped).</li>
 </ul>]]></description>
       <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/3/ADSwift.dmg"
                  type="application/octet-stream"

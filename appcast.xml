@@ -6,34 +6,72 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.1.0</title>
-      <pubDate>Sat, 25 Apr 2026 11:11:02 +0000</pubDate>
-      <sparkle:version>2</sparkle:version>
-      <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+      <title>Version 0.2.0</title>
+      <pubDate>Wed, 29 Apr 2026 11:16:54 +0000</pubDate>
+      <sparkle:version>3</sparkle:version>
+      <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>26.2</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="beta">Beta</h3>
-<p>This is a beta release of ADSwift. The app is functional but still
-under active development — expect rough edges and breaking changes
-between versions. Feedback is very welcome via <strong>Help → Send
-Feedback…</strong> (⌘/).</p>
-<h3 id="added">Added</h3>
+      <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li>Initial public build of ADSwift.</li>
-<li>Apple Search Ads campaign management: campaigns, ad groups,
-keywords, negative keywords.</li>
-<li>Geo map for campaign visualisation.</li>
-<li>Campaign assistant chat panel powered by on-device Foundation Models
-and OpenAI session.</li>
-<li>RevenueCat revenue store for per-app revenue telemetry.</li>
-<li>In-app update notifier via Sparkle 2 — the app now checks for
-updates on launch and every 24 hours, and exposes a <strong>Check for
-Updates…</strong> menu item.</li>
+<li><strong>Add App</strong> flow — track apps in the sidebar before any
+campaigns exist for them. The sidebar’s primary CTA now flips between
+<strong>Connect to Apple Ads</strong> (when credentials aren’t set) and
+<strong>Add App</strong> (once you’re connected).</li>
+<li><strong>Search terms table</strong> — see the actual search queries
+that triggered your ads, with a synthesized <strong>(Low volume
+terms)</strong> aggregate row that backfills the totals Apple suppresses
+for privacy.</li>
+<li><strong>Spend sparkline column</strong> on tables for at-a-glance
+trend without opening a detail view.</li>
+<li><strong>Recent searches</strong> dropdown when filtering
+tables.</li>
+<li><strong>Bulk re-enable</strong> workflow for paused ad groups
+(<code>Enable Paused Ad Groups…</code> sheet).</li>
+<li><strong>Locations picker</strong> for campaign geo targeting.</li>
+<li><strong>Product page picker</strong> for ad-group-level App Store
+product page selection.</li>
+<li><strong>Inline keyword suggestions</strong> inside the keyword and
+bulk-keyword forms — the standalone Suggestions sheet is gone.</li>
+<li><strong>Tag-collision pre-flight</strong> in <code>release.sh</code>
+— fails fast if a release tag already exists rather than
+half-pushing.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><strong>Mock-data fallback removed.</strong> A fresh install with no
+Apple Ads credentials now opens the connection sheet directly instead of
+populating with mock fixtures.</li>
+<li><strong>Lazy loads keep running across navigation.</strong> Ad-group
+and keyword fetches survive the user navigating between table and detail
+views mid-fetch — initiated by <code>DataSourceManager</code> itself
+rather than the calling view.</li>
+<li><strong>Paywall gating consistency.</strong> Sidebar, content
+overlay, and per-row gates now all route through
+<code>LicenseStore.contentIsGated(in:)</code>. Debug mode is fully
+unlocked (mock fixtures, nothing real to gate); live mode gates as
+before.</li>
+<li><strong>RevenueCat keyword scoping</strong> now uses ad-group
+<strong>name</strong> instead of numeric ID — RC attribution stores the
+name, and the parameter labels finally agree.</li>
+<li><strong>Chat providers narrowed</strong> to Claude Code, Codex, and
+OpenAI-compatible HTTP endpoints (OpenRouter, etc.) — see
+<em>Removed</em> below.</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li><strong>Direct OpenAI and Anthropic chat providers.</strong> Use the
+<strong>OpenAI-Compatible</strong> provider with their endpoint URL
+instead.</li>
+<li><strong>Standalone Keyword Suggestions sheet.</strong> Folded into
+the keyword form.</li>
+<li><strong><code>AppStoreHintsService</code>.</strong> Responsibilities
+folded into <code>AppInfoService</code>.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/2/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/3/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="PdjuwA1MtTtIHxxypy8Pru3L6vjfGr+aISL5AOObUNnbrfXNAJ+0TLOJ/VX+E2fLgKKYGUZCDFsEkAW1fKQ6Aw=="
-                 length="21067273"/>
+                 sparkle:edSignature="bSeTfPObTsjgXgIbHlns9JeI+iY1Bhz1e/3kpsbZk28r4/CcMLvfS6wP5W6EUAL+CMBaoR3aBLZTs+oUvFi4AQ=="
+                 length="15492096"/>
     </item>
   </channel>
 </rss>

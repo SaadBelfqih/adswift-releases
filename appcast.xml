@@ -6,54 +6,65 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.2.0</title>
-      <pubDate>Wed, 29 Apr 2026 11:16:54 +0000</pubDate>
-      <sparkle:version>3</sparkle:version>
-      <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
+      <title>Version 0.3.0</title>
+      <pubDate>Thu, 30 Apr 2026 18:36:26 +0000</pubDate>
+      <sparkle:version>4</sparkle:version>
+      <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>26.2</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Add App</strong> — track an app in the sidebar before you
-have any campaigns for it. The sidebar’s primary button now switches
-between <strong>Connect to Apple Ads</strong> and <strong>Add
-App</strong> depending on whether you’ve connected.</li>
-<li><strong>Search Terms</strong> table — see the actual queries that
-triggered your ads, with a <strong>(Low volume terms)</strong> row that
-backfills the totals Apple suppresses for privacy.</li>
-<li><strong>Spend sparklines</strong> on tables for at-a-glance trend
-without opening a detail view.</li>
-<li><strong>Recent searches</strong> dropdown in the table filter
-field.</li>
-<li><strong>Bulk re-enable</strong> for paused ad groups
-(<code>Enable Paused Ad Groups…</code> sheet).</li>
-<li><strong>Locations picker</strong> for campaign geo targeting.</li>
-<li><strong>Product page picker</strong> at the ad-group level.</li>
-<li><strong>Inline keyword suggestions</strong> in the keyword and
-bulk-add forms (the standalone Suggestions sheet is gone).</li>
+<li><strong>Global search</strong> — a single search field that finds
+campaigns, ad groups, keywords, and search terms across every app at
+once.</li>
+<li><strong>Force full resync</strong> for RevenueCat — new entry under
+the Refresh menu wipes the local revenue cache and re-fetches from page
+1, behind a confirmation dialog.</li>
 </ul>
 <h3 id="changed">Changed</h3>
 <ul>
-<li>A fresh install with no Apple Ads credentials now opens the
-<strong>Connect</strong> sheet immediately instead of populating the app
-with mock fixtures.</li>
-<li>Switching between a table and its detail view mid-fetch no longer
-cancels the load.</li>
-<li>Chat providers narrowed to <strong>Claude Code</strong>,
-<strong>Codex</strong>, and <strong>OpenAI-Compatible</strong> HTTP
-endpoints (OpenRouter and similar). The direct OpenAI and Anthropic
-providers were removed — use OpenAI-Compatible with their endpoint URL
-instead.</li>
+<li><strong>RevenueCat revenue sync is dramatically faster and more
+reliable.</strong>
+<ul>
+<li>Multi-app accounts now sync in parallel instead of one app at a
+time.</li>
+<li>The sync resumes where it left off if you quit mid-sync, instead of
+restarting from page 1.</li>
+<li>Day-to-day refreshes only re-fetch customers who actually changed
+since the last sync.</li>
+<li>Adaptive rate limiting reads RevenueCat’s own headers and slows down
+before hitting the cap, so big accounts stop hitting 429s.</li>
+<li>Renewals are now counted in the period they were paid for.
+Previously a yearly subscription’s full revenue could land entirely on
+the start date, distorting date-range reports — yearly/monthly totals
+are split across their actual billing periods.</li>
+</ul></li>
+<li><strong>Tables open faster</strong> — opening an app’s ad groups or
+a campaign’s keywords used to fan out one Apple Ads request per row;
+both are now a single bulk request.</li>
+<li><strong>Search Terms</strong> no longer truncates at 1,000 rows —
+paginates up to 5,000.</li>
+<li>Local database moved into its own folder so it can’t collide with
+other apps. Existing data is migrated automatically on first launch.
+Downgrading to an older build after this version will show an empty
+database.</li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li>Per-keyword RevenueCat revenue now matches reliably across ad groups
-(was occasionally missing or mis-scoped).</li>
+<li>Reloading after a partially completed sync no longer crashes when
+duplicate ad-group/keyword rows are present — the duplicates are merged
+automatically on the next reload.</li>
+<li>Cancelling a load (e.g. switching tables mid-fetch) no longer
+silently deletes rows that hadn’t been re-fetched yet.</li>
+<li>Manual refresh now actually re-fetches metrics even when the entity
+list hasn’t changed.</li>
+<li>Sample data (Help → Show sample data) no longer crashes on machines
+outside UTC.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/3/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/4/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="bSeTfPObTsjgXgIbHlns9JeI+iY1Bhz1e/3kpsbZk28r4/CcMLvfS6wP5W6EUAL+CMBaoR3aBLZTs+oUvFi4AQ=="
-                 length="15492096"/>
+                 sparkle:edSignature="+IQMf9gMjvoNA2B2SHzFQzIT+NLuKgN2auiq03tTafMmxtz6cP4Y6XwT19X3B80OoUhBHcqhGnQvNyjFI6GaDg=="
+                 length="16082057"/>
     </item>
   </channel>
 </rss>

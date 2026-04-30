@@ -92,8 +92,58 @@ changes, patch bumps for bug fixes. <code>1.0.0</code> will be cut at
 the public launch.</p>
 </blockquote>
 <h2 id="unreleased">[Unreleased]</h2>
-<h2 id="section">[0.2.0] - 2026-04-29</h2>
+<h2 id="section">[0.3.0] - 2026-04-30</h2>
 <h3 id="added">Added</h3>
+<ul>
+<li><strong>Global search</strong> — a single search field that finds
+campaigns, ad groups, keywords, and search terms across every app at
+once.</li>
+<li><strong>Force full resync</strong> for RevenueCat — new entry under
+the Refresh menu wipes the local revenue cache and re-fetches from page
+1, behind a confirmation dialog.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><strong>RevenueCat revenue sync is dramatically faster and more
+reliable.</strong>
+<ul>
+<li>Multi-app accounts now sync in parallel instead of one app at a
+time.</li>
+<li>The sync resumes where it left off if you quit mid-sync, instead of
+restarting from page 1.</li>
+<li>Day-to-day refreshes only re-fetch customers who actually changed
+since the last sync.</li>
+<li>Adaptive rate limiting reads RevenueCat’s own headers and slows down
+before hitting the cap, so big accounts stop hitting 429s.</li>
+<li>Renewals are now counted in the period they were paid for.
+Previously a yearly subscription’s full revenue could land entirely on
+the start date, distorting date-range reports — yearly/monthly totals
+are split across their actual billing periods.</li>
+</ul></li>
+<li><strong>Tables open faster</strong> — opening an app’s ad groups or
+a campaign’s keywords used to fan out one Apple Ads request per row;
+both are now a single bulk request.</li>
+<li><strong>Search Terms</strong> no longer truncates at 1,000 rows —
+paginates up to 5,000.</li>
+<li>Local database moved into its own folder so it can’t collide with
+other apps. Existing data is migrated automatically on first launch.
+Downgrading to an older build after this version will show an empty
+database.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Reloading after a partially completed sync no longer crashes when
+duplicate ad-group/keyword rows are present — the duplicates are merged
+automatically on the next reload.</li>
+<li>Cancelling a load (e.g. switching tables mid-fetch) no longer
+silently deletes rows that hadn’t been re-fetched yet.</li>
+<li>Manual refresh now actually re-fetches metrics even when the entity
+list hasn’t changed.</li>
+<li>Sample data (Help → Show sample data) no longer crashes on machines
+outside UTC.</li>
+</ul>
+<h2 id="section-1">[0.2.0] - 2026-04-29</h2>
+<h3 id="added-1">Added</h3>
 <ul>
 <li><strong>Add App</strong> — track an app in the sidebar before you
 have any campaigns for it. The sidebar’s primary button now switches
@@ -113,7 +163,7 @@ field.</li>
 <li><strong>Inline keyword suggestions</strong> in the keyword and
 bulk-add forms (the standalone Suggestions sheet is gone).</li>
 </ul>
-<h3 id="changed">Changed</h3>
+<h3 id="changed-1">Changed</h3>
 <ul>
 <li>A fresh install with no Apple Ads credentials now opens the
 <strong>Connect</strong> sheet immediately instead of populating the app
@@ -126,18 +176,18 @@ endpoints (OpenRouter and similar). The direct OpenAI and Anthropic
 providers were removed — use OpenAI-Compatible with their endpoint URL
 instead.</li>
 </ul>
-<h3 id="fixed">Fixed</h3>
+<h3 id="fixed-1">Fixed</h3>
 <ul>
 <li>Per-keyword RevenueCat revenue now matches reliably across ad groups
 (was occasionally missing or mis-scoped).</li>
 </ul>
-<h2 id="section-1">[0.1.0] - 2026-04-25</h2>
+<h2 id="section-2">[0.1.0] - 2026-04-25</h2>
 <h3 id="beta">Beta</h3>
 <p>This is a beta release of ADSwift. The app is functional but still
 under active development — expect rough edges and breaking changes
 between versions. Feedback is very welcome via <strong>Help → Send
 Feedback…</strong> (⌘/).</p>
-<h3 id="added-1">Added</h3>
+<h3 id="added-2">Added</h3>
 <ul>
 <li>Initial public build of ADSwift.</li>
 <li>Apple Search Ads campaign management: campaigns, ad groups,

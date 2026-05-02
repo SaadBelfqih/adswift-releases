@@ -6,65 +6,51 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.3.0</title>
-      <pubDate>Thu, 30 Apr 2026 18:36:26 +0000</pubDate>
-      <sparkle:version>4</sparkle:version>
-      <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+      <title>Version 0.4.0</title>
+      <pubDate>Sat, 02 May 2026 14:56:03 +0000</pubDate>
+      <sparkle:version>5</sparkle:version>
+      <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>26.2</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Global search</strong> — a single search field that finds
-campaigns, ad groups, keywords, and search terms across every app at
-once.</li>
-<li><strong>Force full resync</strong> for RevenueCat — new entry under
-the Refresh menu wipes the local revenue cache and re-fetches from page
-1, behind a confirmation dialog.</li>
+<li><strong>Multi-org workspace switcher.</strong> If your Apple Ads
+account has multiple organizations, the sidebar now shows the active one
+and lets you switch between them. Each org keeps its own campaigns,
+history, and refresh state — switching orgs no longer mixes data across
+them.</li>
+<li><strong>Ask the assistant to switch workspaces.</strong> The chat
+has new <code>list_orgs</code> and <code>switch_org</code> tools, so you
+can say “list my orgs” or “switch to my testing org” and follow-up
+requests run against the new one.</li>
+<li><strong>Clickable links in chat answers.</strong> Campaign, ad
+group, and app names in chat replies are now in-app links — clicking one
+jumps to that page in ADSwift instead of popping a new window.</li>
 </ul>
 <h3 id="changed">Changed</h3>
 <ul>
-<li><strong>RevenueCat revenue sync is dramatically faster and more
-reliable.</strong>
-<ul>
-<li>Multi-app accounts now sync in parallel instead of one app at a
-time.</li>
-<li>The sync resumes where it left off if you quit mid-sync, instead of
-restarting from page 1.</li>
-<li>Day-to-day refreshes only re-fetch customers who actually changed
-since the last sync.</li>
-<li>Adaptive rate limiting reads RevenueCat’s own headers and slows down
-before hitting the cap, so big accounts stop hitting 429s.</li>
-<li>Renewals are now counted in the period they were paid for.
-Previously a yearly subscription’s full revenue could land entirely on
-the start date, distorting date-range reports — yearly/monthly totals
-are split across their actual billing periods.</li>
-</ul></li>
-<li><strong>Tables open faster</strong> — opening an app’s ad groups or
-a campaign’s keywords used to fan out one Apple Ads request per row;
-both are now a single bulk request.</li>
-<li><strong>Search Terms</strong> no longer truncates at 1,000 rows —
-paginates up to 5,000.</li>
-<li>Local database moved into its own folder so it can’t collide with
-other apps. Existing data is migrated automatically on first launch.
-Downgrading to an older build after this version will show an empty
-database.</li>
+<li><strong>Update checks run every 4 hours</strong> during the beta
+instead of every 24 hours, so fixes land sooner.</li>
+<li><strong>Multi-step chat requests are batched.</strong> Asking for
+“the report for last week and bump campaign X to $30” now executes both
+actions in a single round trip in the order you asked.</li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li>Reloading after a partially completed sync no longer crashes when
-duplicate ad-group/keyword rows are present — the duplicates are merged
-automatically on the next reload.</li>
-<li>Cancelling a load (e.g. switching tables mid-fetch) no longer
-silently deletes rows that hadn’t been re-fetched yet.</li>
-<li>Manual refresh now actually re-fetches metrics even when the entity
-list hasn’t changed.</li>
-<li>Sample data (Help → Show sample data) no longer crashes on machines
-outside UTC.</li>
+<li><strong>All Campaigns</strong> view: the RC Revenue column now
+totals across every app instead of being silently scoped to whichever
+app you last opened from the toolbar.</li>
+<li>Chat-emitted links no longer pop a fresh ADSwift window — they reuse
+the existing main window.</li>
+<li>Bold text wrapped around chat links no longer leaks literal
+<code>**</code> asterisks.</li>
+<li>Spend sparklines stretch to fill their column width instead of
+sitting at a fixed narrow size.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/4/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/5/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="+IQMf9gMjvoNA2B2SHzFQzIT+NLuKgN2auiq03tTafMmxtz6cP4Y6XwT19X3B80OoUhBHcqhGnQvNyjFI6GaDg=="
-                 length="16082057"/>
+                 sparkle:edSignature="1vTXIUj6bVWJMb7dzhjY7J4+3Ei7UuYl3sb5mIvtL6dQYyllIsGawtV06YlsEA47Oa7+bZePni5lUTPq3+nTAg=="
+                 length="16243171"/>
     </item>
   </channel>
 </rss>

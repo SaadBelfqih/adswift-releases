@@ -80,6 +80,22 @@ code {
 </head>
 <body>
 <main>
+<h2 id="ver.-0.4.1-03052026">Ver. 0.4.1 — 03/05/2026</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><strong>Lower minimum macOS to 15.0 (Sequoia).</strong> ADSwift now
+runs on last year’s macOS in addition to macOS 26 Tahoe.</li>
+<li><strong>Smoother sidebar → table transitions.</strong> Switching
+between a specific app and All Campaigns now repaints the sidebar
+selection instantly instead of waiting for the table to re-render, so
+clicks no longer feel stuck.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>All Campaigns</strong> view: the RC Revenue column now
+refreshes when you switch from a per-app view, instead of briefly
+showing the previous app’s totals.</li>
+</ul>
 <h2 id="ver.-0.4.0-02052026">Ver. 0.4.0 — 02/05/2026</h2>
 <h3 id="added">Added</h3>
 <ul>
@@ -96,7 +112,7 @@ requests run against the new one.</li>
 group, and app names in chat replies are now in-app links — clicking one
 jumps to that page in ADSwift instead of popping a new window.</li>
 </ul>
-<h3 id="changed">Changed</h3>
+<h3 id="changed-1">Changed</h3>
 <ul>
 <li><strong>Update checks run every 4 hours</strong> during the beta
 instead of every 24 hours, so fixes land sooner.</li>
@@ -104,7 +120,7 @@ instead of every 24 hours, so fixes land sooner.</li>
 “the report for last week and bump campaign X to $30” now executes both
 actions in a single round trip in the order you asked.</li>
 </ul>
-<h3 id="fixed">Fixed</h3>
+<h3 id="fixed-1">Fixed</h3>
 <ul>
 <li><strong>All Campaigns</strong> view: the RC Revenue column now
 totals across every app instead of being silently scoped to whichever
@@ -126,7 +142,7 @@ once.</li>
 the Refresh menu wipes the local revenue cache and re-fetches from page
 1, behind a confirmation dialog.</li>
 </ul>
-<h3 id="changed-1">Changed</h3>
+<h3 id="changed-2">Changed</h3>
 <ul>
 <li><strong>RevenueCat revenue sync is dramatically faster and more
 reliable.</strong>
@@ -154,7 +170,7 @@ other apps. Existing data is migrated automatically on first launch.
 Downgrading to an older build after this version will show an empty
 database.</li>
 </ul>
-<h3 id="fixed-1">Fixed</h3>
+<h3 id="fixed-2">Fixed</h3>
 <ul>
 <li>Reloading after a partially completed sync no longer crashes when
 duplicate ad-group/keyword rows are present — the duplicates are merged
@@ -187,7 +203,7 @@ field.</li>
 <li><strong>Inline keyword suggestions</strong> in the keyword and
 bulk-add forms (the standalone Suggestions sheet is gone).</li>
 </ul>
-<h3 id="changed-2">Changed</h3>
+<h3 id="changed-3">Changed</h3>
 <ul>
 <li>A fresh install with no Apple Ads credentials now opens the
 <strong>Connect</strong> sheet immediately instead of populating the app
@@ -200,7 +216,7 @@ endpoints (OpenRouter and similar). The direct OpenAI and Anthropic
 providers were removed — use OpenAI-Compatible with their endpoint URL
 instead.</li>
 </ul>
-<h3 id="fixed-2">Fixed</h3>
+<h3 id="fixed-3">Fixed</h3>
 <ul>
 <li>Per-keyword RevenueCat revenue now matches reliably across ad groups
 (was occasionally missing or mis-scoped).</li>

@@ -6,31 +6,49 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.4.1</title>
-      <pubDate>Sun, 03 May 2026 08:27:19 +0000</pubDate>
-      <sparkle:version>6</sparkle:version>
-      <sparkle:shortVersionString>0.4.1</sparkle:shortVersionString>
+      <title>Version 0.4.2</title>
+      <pubDate>Tue, 05 May 2026 10:21:42 +0000</pubDate>
+      <sparkle:version>7</sparkle:version>
+      <sparkle:shortVersionString>0.4.2</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="changed">Changed</h3>
+      <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Lower minimum macOS to 15.0 (Sequoia).</strong> ADSwift now
-runs on last year’s macOS in addition to macOS 26 Tahoe.</li>
-<li><strong>Smoother sidebar → table transitions.</strong> Switching
-between a specific app and All Campaigns now repaints the sidebar
-selection instantly instead of waiting for the table to re-render, so
-clicks no longer feel stuck.</li>
+<li><strong>First-time onboarding tip for RevenueCat.</strong> On first
+launch, a small popover anchored to the toolbar RevenueCat icon explains
+how to connect — and reminds you that keys are per-project (each app you
+track needs its own).</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><strong>Faster table loads on per-app views.</strong> A single app’s
+table now requests only its own campaigns from Apple Ads instead of
+fetching the whole org and filtering client-side.</li>
+<li><strong>Long date ranges (&gt;~90 days) now render
+correctly.</strong> Apple Ads rejects daily granularity for those spans;
+ADSwift falls back to weekly/monthly bucketing automatically. Aggregate
+values (spend, taps, etc.) stay exact — only inline sparkline resolution
+changes.</li>
+<li><strong>Trend sparkline column hides when it can’t be drawn</strong>
+(Today / Yesterday, and ranges over ~90 days) instead of filling the row
+with em-dashes.</li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li><strong>All Campaigns</strong> view: the RC Revenue column now
-refreshes when you switch from a per-app view, instead of briefly
-showing the previous app’s totals.</li>
+<li><strong>Empty or errored metric cells no longer shimmer
+forever.</strong> Campaigns, ad groups, and keywords with no spend in
+the selected range now render as zero, and a failed Apple Ads request
+leaves cells in a “no data” state.</li>
+<li><strong>Custom date range pickers no longer trigger duplicate
+RevenueCat re-aggregations</strong> on selection — three coalesced into
+one.</li>
+<li><strong>Per-app metrics cache is now keyed by scope</strong>, so an
+All-Campaigns view can’t inherit the previous app’s narrowed cache.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/6/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/7/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="NGpPwuJB60KwqZ8IfDkZcBnLd0p4harecjVpgZGICFkMPERPHznrE2Z5rqme0Mm6ffdoBSYava8w8bReAa8MCQ=="
-                 length="16269532"/>
+                 sparkle:edSignature="cuRAKTIk09Hw/SVa1PXAK4gjfn4QmIwyGaoNGwKBhA8z1Ybjoc8F3yc0aVc9LfV0GEugEy7gDRPGMPu38XzzBw=="
+                 length="16279980"/>
     </item>
   </channel>
 </rss>

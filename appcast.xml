@@ -6,53 +6,64 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.5.0</title>
-      <pubDate>Wed, 06 May 2026 10:00:33 +0000</pubDate>
-      <sparkle:version>8</sparkle:version>
-      <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
+      <title>Version 0.6.0</title>
+      <pubDate>Fri, 08 May 2026 10:24:06 +0000</pubDate>
+      <sparkle:version>9</sparkle:version>
+      <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Settings → Connections pane.</strong> New tab (⌘,) listing
-every app in your live org with Connect / Edit / Disconnect for
-RevenueCat, plus the Apple Ads account with masked credentials and Edit
-/ Sign Out actions.</li>
-<li><strong>Guided RevenueCat connect flow.</strong> A step-by-step
-sheet walks you through creating a project-scoped Secret API key, lists
-the exact permissions RevenueCat needs, and includes a Test button that
-probes every endpoint and names the missing permission in plain English
-when something fails.</li>
-<li><strong>Post-Apple-Ads onboarding.</strong> After your first Apple
-Ads connect, a one-time sheet explains how RevenueCat adds revenue +
-attribution and links to the RevenueCat Apple Search Ads docs.</li>
-<li><strong>Apple Ads account chip in the sidebar.</strong> Click the
-status row to open a popover with the org name, masked Client ID, and
-Edit Credentials / Sign Out — credentials clear from Keychain but cached
-campaigns stay.</li>
+<li><strong>Sign in to RevenueCat with one click.</strong> A new
+browser-based sign-in replaces the per-project API-key paste flow. One
+sign-in covers every iOS app on your account, and ADSwift auto-matches
+each app to its RevenueCat project by bundle id. Existing users will see
+a one-time reconnect prompt on first launch — your campaigns and revenue
+history are preserved.</li>
+<li><strong>App ↔︎ project mappings table</strong> in Settings →
+Connections → RevenueCat. Edit per-app, sign out, or jump to RevenueCat
+to revoke access globally.</li>
+<li><strong>Multi-currency support.</strong> Spend, revenue, and
+proceeds in non-USD campaigns are now converted to USD using daily ECB
+rates. A new toolbar status pill shows when FX is active and when rates
+last refreshed.</li>
+<li><strong>Rev/Install and Net/Install</strong> alongside CPA in
+campaign, ad group, and keyword detail views — see what each install is
+actually worth, and whether you’re net-positive after spend.</li>
+<li><strong>Revenue overlay on the Spend chart.</strong> Attributed
+revenue now plots on top of daily spend so you can see profitability at
+a glance.</li>
+<li><strong>Trials column</strong> in the campaign, ad group, and
+keyword tables (visible by default, with a hover caveat explaining trial
+attribution).</li>
+<li><strong>Attribution coverage badge</strong> on detail views —
+surfaces what fraction of installs in the selected window have
+RevenueCat-attributed revenue, so partial coverage is visible instead of
+silently lowering Rev/Install.</li>
+<li><strong>Menu bar revenue widget.</strong> A small MenuBarExtra shows
+today’s RC-attributed revenue across all connected apps with a 7-day
+sparkline, toggleable from Settings.</li>
+<li><strong>Screenshot disguise mode</strong> — toolbar eye icon (or
+⌘⇧D) hides app names, icons, and campaign names so you can share
+screenshots without revealing real account data.</li>
+<li><strong>Identifiers chevron</strong> on detail views — click to
+reveal Apple Ads campaign/ad group/keyword IDs without permanently
+cluttering the layout.</li>
+<li><strong>First-run banner</strong> explains why Rev/Install is empty
+for fresh RevenueCat integrations until backfill completes.</li>
 </ul>
 <h3 id="changed">Changed</h3>
 <ul>
-<li><strong>Sidebar collapses parallel RC syncs.</strong> When multiple
-apps are fetching, you get a single line
-(<code>Fetching RC data for &lt;App&gt; and 3 other apps…</code>) with a
-chevron to expand. Previously only the first fetch was visible.</li>
-<li><strong>RevenueCat auto-refreshes every 6 hours on launch.</strong>
-Apps with stale data queue a delta refresh automatically — no more
-“Synced 2 days ago”.</li>
-<li>Removed the <code>X customers · Y attributed</code> line from the
-sidebar fetch status.</li>
-</ul>
-<h3 id="fixed">Fixed</h3>
-<ul>
-<li><strong>Resumes interrupted RevenueCat syncs.</strong> Quit mid-sync
-and the next launch picks up from the saved cursor instead of starting
-over.</li>
+<li><strong>“Source” filter renamed to “Placements”</strong> to match
+the table column header.</li>
+<li><strong>ROI color</strong> in detail headers now uses the same
+green/red threshold as the table column so Net/Install and ROI agree at
+a glance.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/8/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/9/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="4zvNnxncnzUFWtfL/4Komgp+6XXdzH7fwl7jThs9dn++BRw7QpPdkbuD71tYC2SVtsN38cw9eSKmpTpj6sqoDQ=="
-                 length="16495562"/>
+                 sparkle:edSignature="hv75HPOOHkd9Ob+Z6o1mxL/mHb7Qng0oGTCWcepkRbQlaO12iT0NB4ayXZXhGqem25LNjDd3yjJmuXJELqppAw=="
+                 length="17066955"/>
     </item>
   </channel>
 </rss>

@@ -6,64 +6,35 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.6.0</title>
-      <pubDate>Fri, 08 May 2026 10:24:06 +0000</pubDate>
-      <sparkle:version>9</sparkle:version>
-      <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
+      <title>Version 0.6.1</title>
+      <pubDate>Fri, 08 May 2026 15:23:49 +0000</pubDate>
+      <sparkle:version>10</sparkle:version>
+      <sparkle:shortVersionString>0.6.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="added">Added</h3>
+      <description><![CDATA[<h3 id="fixed">Fixed</h3>
 <ul>
-<li><strong>Sign in to RevenueCat with one click.</strong> A new
-browser-based sign-in replaces the per-project API-key paste flow. One
-sign-in covers every iOS app on your account, and ADSwift auto-matches
-each app to its RevenueCat project by bundle id. Existing users will see
-a one-time reconnect prompt on first launch — your campaigns and revenue
-history are preserved.</li>
-<li><strong>App ↔︎ project mappings table</strong> in Settings →
-Connections → RevenueCat. Edit per-app, sign out, or jump to RevenueCat
-to revoke access globally.</li>
-<li><strong>Multi-currency support.</strong> Spend, revenue, and
-proceeds in non-USD campaigns are now converted to USD using daily ECB
-rates. A new toolbar status pill shows when FX is active and when rates
-last refreshed.</li>
-<li><strong>Rev/Install and Net/Install</strong> alongside CPA in
-campaign, ad group, and keyword detail views — see what each install is
-actually worth, and whether you’re net-positive after spend.</li>
-<li><strong>Revenue overlay on the Spend chart.</strong> Attributed
-revenue now plots on top of daily spend so you can see profitability at
-a glance.</li>
-<li><strong>Trials column</strong> in the campaign, ad group, and
-keyword tables (visible by default, with a hover caveat explaining trial
-attribution).</li>
-<li><strong>Attribution coverage badge</strong> on detail views —
-surfaces what fraction of installs in the selected window have
-RevenueCat-attributed revenue, so partial coverage is visible instead of
-silently lowering Rev/Install.</li>
-<li><strong>Menu bar revenue widget.</strong> A small MenuBarExtra shows
-today’s RC-attributed revenue across all connected apps with a 7-day
-sparkline, toggleable from Settings.</li>
-<li><strong>Screenshot disguise mode</strong> — toolbar eye icon (or
-⌘⇧D) hides app names, icons, and campaign names so you can share
-screenshots without revealing real account data.</li>
-<li><strong>Identifiers chevron</strong> on detail views — click to
-reveal Apple Ads campaign/ad group/keyword IDs without permanently
-cluttering the layout.</li>
-<li><strong>First-run banner</strong> explains why Rev/Install is empty
-for fresh RevenueCat integrations until backfill completes.</li>
+<li><strong>RevenueCat reconnect no longer lands on an empty “No iOS
+apps to map yet” screen</strong> when your apps came from Apple Ads
+campaigns or the sidebar hadn’t finished loading.</li>
+<li><strong>Previous RevenueCat project mappings are restored
+automatically</strong> on reconnect. If every app re-binds cleanly the
+dialog dismisses itself with a confirmation toast — no manual review
+pass.</li>
+<li><strong>Deleted RevenueCat projects</strong> are flagged with a
+“pick another” prompt instead of silently dropped.</li>
 </ul>
 <h3 id="changed">Changed</h3>
 <ul>
-<li><strong>“Source” filter renamed to “Placements”</strong> to match
-the table column header.</li>
-<li><strong>ROI color</strong> in detail headers now uses the same
-green/red threshold as the table column so Net/Install and ROI agree at
-a glance.</li>
+<li><strong>Reconnect flow polish:</strong> skips the sign-in pitch when
+you’re already signed in, narrates progress step-by-step, marks each row
+as restored or auto-matched, and Cancel now offers Save / Discard / Keep
+editing.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/9/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/10/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="hv75HPOOHkd9Ob+Z6o1mxL/mHb7Qng0oGTCWcepkRbQlaO12iT0NB4ayXZXhGqem25LNjDd3yjJmuXJELqppAw=="
-                 length="17066955"/>
+                 sparkle:edSignature="bgMOhSL25fsrbPRtsY4++K44cTPWHs+FWtEIHQf/fazsYt+7WS2W9mZkvVdSjrjhN3dr9iRUovpjvHnVKMVQCQ=="
+                 length="17098395"/>
     </item>
   </channel>
 </rss>

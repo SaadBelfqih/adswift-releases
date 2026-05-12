@@ -6,35 +6,72 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.6.1</title>
-      <pubDate>Fri, 08 May 2026 15:23:49 +0000</pubDate>
-      <sparkle:version>10</sparkle:version>
-      <sparkle:shortVersionString>0.6.1</sparkle:shortVersionString>
+      <title>Version 0.7.0</title>
+      <pubDate>Tue, 12 May 2026 14:41:41 +0000</pubDate>
+      <sparkle:version>11</sparkle:version>
+      <sparkle:shortVersionString>0.7.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="fixed">Fixed</h3>
+      <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>RevenueCat reconnect no longer lands on an empty “No iOS
-apps to map yet” screen</strong> when your apps came from Apple Ads
-campaigns or the sidebar hadn’t finished loading.</li>
-<li><strong>Previous RevenueCat project mappings are restored
-automatically</strong> on reconnect. If every app re-binds cleanly the
-dialog dismisses itself with a confirmation toast — no manual review
-pass.</li>
-<li><strong>Deleted RevenueCat projects</strong> are flagged with a
-“pick another” prompt instead of silently dropped.</li>
+<li><strong>Spend by app in the menu bar widget.</strong> Total spend
+over the last 7 days plus a per-app breakdown of the top spenders, so
+you can see where the money’s going without opening the app.</li>
+<li><strong>“Reporting” pill in the toolbar</strong> showing your active
+reporting currency. Click it to jump to Settings → Connections.</li>
+<li><strong>Toast on org switch</strong> confirming “Now showing values
+in EUR” (or whichever currency) so unit changes never sneak past
+you.</li>
+<li><strong>Native-currency tooltip on bid and budget cells.</strong>
+Hover any Daily Budget / Default Bid / Bid Amount / CPA Goal cell to see
+Apple’s source-of-truth value in the campaign’s billing currency.</li>
+<li><strong>Live conversion preview when editing bids and
+budgets</strong> — type in the campaign’s native currency, see “≈ $30.00
+USD” inline.</li>
+<li><strong>A clear loading indicator for revenue</strong> next to the
+date picker, plus per-cell shimmer in Ad Group and Keyword tables so you
+always know what’s refreshing.</li>
 </ul>
 <h3 id="changed">Changed</h3>
 <ul>
-<li><strong>Reconnect flow polish:</strong> skips the sign-in pitch when
-you’re already signed in, narrates progress step-by-step, marks each row
-as restored or auto-matched, and Cancel now offers Save / Discard / Keep
-editing.</li>
+<li><strong>Every monetary value is now in your Apple Ads reporting
+currency.</strong> Spend, Avg CPA, Avg CPT, Daily Budget, Bid Amount,
+CPA Goal, RC Revenue, Net Profit, Net ROAS, summary cards, chart axes,
+geo map, menu bar, search terms, and chat outputs all share one unit.
+Per-day FX is applied so historical math is correct, not just
+today’s.</li>
+<li><strong>Approximate (<code>≈</code>) prefix</strong> on values whose
+FX rate was unavailable or stale, so you can tell which numbers might
+shift after the next refresh.</li>
+<li><strong>Connecting RevenueCat is now nearly instant</strong> —
+revenue shows up within seconds of finishing the connect + match flow
+instead of needing a long first-time sync.</li>
+<li><strong>The detail panel’s date picker is now in sync with the main
+view.</strong> Picking 30D in either place updates revenue, spend, and
+the chart together instead of just the inspector chart.</li>
+<li><strong>Settings → Connections</strong> now shows your reporting
+currency next to the connected org.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>All Campaigns shows revenue right away on launch</strong>
+instead of needing you to click into an app and back.</li>
+<li><strong>Revenue starts loading automatically after first RevenueCat
+connect + match</strong> instead of waiting for a click.</li>
+<li><strong>“Loading revenue…” no longer gets stuck</strong> in sessions
+where the data had already arrived.</li>
+<li><strong>Snappier screen changes.</strong> Opening a campaign or ad
+group no longer fires duplicate background requests; switching recent
+date ranges is near-instant.</li>
+<li><strong>Ad-group and keyword revenue stays scoped to the visible
+app</strong> when switching between apps.</li>
+<li><strong>Avg CPA / CPT match across rows and toolbar</strong> — both
+now use the install- / tap-weighted formula.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/10/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/11/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="bgMOhSL25fsrbPRtsY4++K44cTPWHs+FWtEIHQf/fazsYt+7WS2W9mZkvVdSjrjhN3dr9iRUovpjvHnVKMVQCQ=="
-                 length="17098395"/>
+                 sparkle:edSignature="gIiW4/i2LqvDA45p1m0gahPolamohu+YmzKGS29mpiaQDiDMluLomjwIrfclbpnZwZvKU1dWs7evFmJPi6t+CQ=="
+                 length="18052813"/>
     </item>
   </channel>
 </rss>

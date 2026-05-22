@@ -6,25 +6,24 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.8.1</title>
-      <pubDate>Thu, 21 May 2026 11:05:29 +0000</pubDate>
-      <sparkle:version>13</sparkle:version>
-      <sparkle:shortVersionString>0.8.1</sparkle:shortVersionString>
+      <title>Version 0.8.2</title>
+      <pubDate>Fri, 22 May 2026 10:48:06 +0000</pubDate>
+      <sparkle:version>14</sparkle:version>
+      <sparkle:shortVersionString>0.8.2</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="fixed">Fixed</h3>
 <ul>
-<li><strong>Accurate Conversion Rate and TTR on multi-day date
-ranges.</strong> The Conv. Rate and TTR columns in the campaigns, ad
-groups, and keywords tables now compute as <code>installs ÷ taps</code>
-and <code>taps ÷ impressions</code> over the selected range, matching
-the toolbar summary. Previously these columns averaged each day’s rate,
-which read visibly off when daily traffic was uneven.</li>
+<li><strong>Mac Dock icon appearance.</strong> ADSwift’s Dock icon now
+keeps its intended rounded app-icon shape on macOS.</li>
+<li><strong>Toolbar layout while resizing.</strong> Table controls now
+stay readable when the window is resized, instead of overlapping or
+collapsing into clipped text.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/13/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/14/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="XEBsin3j6Dit1ELEBr4CfT4DC2zTJeBYXe1tvSTEoGa51Qe7kUVxPs1Fmed55YGU5hTeIERQJv/bWm59m0pMCg=="
-                 length="19149834"/>
+                 sparkle:edSignature="bshEUOODSaUjpOh2z3hqCEp3VUY8En1kk7UOqVR8rYp3AjmNaMuBfDy9Na32gft2LJtMulBNEgZf8fc247tqBw=="
+                 length="18328261"/>
     </item>
   </channel>
 </rss>

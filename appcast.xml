@@ -6,24 +6,37 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.8.2</title>
-      <pubDate>Fri, 22 May 2026 10:48:06 +0000</pubDate>
-      <sparkle:version>14</sparkle:version>
-      <sparkle:shortVersionString>0.8.2</sparkle:shortVersionString>
+      <title>Version 0.8.3</title>
+      <pubDate>Sat, 23 May 2026 22:49:54 +0000</pubDate>
+      <sparkle:version>15</sparkle:version>
+      <sparkle:shortVersionString>0.8.3</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="fixed">Fixed</h3>
 <ul>
-<li><strong>Mac Dock icon appearance.</strong> ADSwift’s Dock icon now
-keeps its intended rounded app-icon shape on macOS.</li>
-<li><strong>Toolbar layout while resizing.</strong> Table controls now
-stay readable when the window is resized, instead of overlapping or
-collapsing into clipped text.</li>
+<li><strong>Fix crash on launch for users with duplicate
+records.</strong> A startup crash that hit users whose local store
+contained a duplicate campaign, ad group, or keyword is now fixed. The
+app opens cleanly and shows every row instead of bailing out.</li>
+<li><strong>Revenue figures stop leaking across the date
+filter.</strong> Switching between Today and Yesterday quickly could
+briefly show one range’s per-campaign RC Revenue while the other was
+loading — most visibly as the same number on both views. The revenue
+lookup now resets on actual range changes and ignores in-flight data
+that arrives after you’ve moved on.</li>
+<li><strong>Yesterday filter now covers a full 24-hour day.</strong>
+Previously the Yesterday range was a zero-width instant, so totals
+computed against your local store returned nothing. Fixed.</li>
+<li><strong>Revenue and spend now use the same timezone.</strong>
+Revenue queries used the device’s local timezone while spend used your
+org’s reporting timezone. They now agree, so the two columns can’t
+disagree on which day a number belongs to for users whose device and org
+timezones differ.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/14/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/15/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="bshEUOODSaUjpOh2z3hqCEp3VUY8En1kk7UOqVR8rYp3AjmNaMuBfDy9Na32gft2LJtMulBNEgZf8fc247tqBw=="
-                 length="18328261"/>
+                 sparkle:edSignature="cyE4d8Vl7QjVWU/RCNyAfo5x4QWMcqaArB3sXDXJF6TJDzdGmciDymr5Xfzgiel90DIZWdHXcmbN1Yskee3+BA=="
+                 length="18337715"/>
     </item>
   </channel>
 </rss>

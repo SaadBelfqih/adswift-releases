@@ -1,7 +1,7 @@
 {
   "payload" : {
-    "issuedAt" : "2026-04-29T11:24:31Z",
-    "paywallDisabled" : true
+    "issuedAt" : "2026-06-09T10:10:58Z",
+    "paywallDisabled" : false
   },
-  "signature" : "t4mQNwxiQ/kwDJaxZBCAKIn7JQl7PQF/WC3dvWuq9LEJ8iFypdbvw7oxfUKgiuwgOgQaXvWMcahJ5rdiQC/4CQ=="
+  "signature" : "ebe+HMd4FRGNzwEAirunmxN3ljhbLy2AMgpq4Td7K4DrXuj13XapzEpl6DjLd5UTNBZzFjsx75mXJDlYy8ePCA=="
 }

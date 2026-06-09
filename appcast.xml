@@ -6,37 +6,56 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 0.8.3</title>
-      <pubDate>Sat, 23 May 2026 22:49:54 +0000</pubDate>
-      <sparkle:version>15</sparkle:version>
-      <sparkle:shortVersionString>0.8.3</sparkle:shortVersionString>
+      <title>Version 1.0.0</title>
+      <pubDate>Tue, 09 Jun 2026 10:34:58 +0000</pubDate>
+      <sparkle:version>16</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="fixed">Fixed</h3>
+      <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Fix crash on launch for users with duplicate
-records.</strong> A startup crash that hit users whose local store
-contained a duplicate campaign, ad group, or keyword is now fixed. The
-app opens cleanly and shows every row instead of bailing out.</li>
-<li><strong>Revenue figures stop leaking across the date
-filter.</strong> Switching between Today and Yesterday quickly could
-briefly show one range’s per-campaign RC Revenue while the other was
-loading — most visibly as the same number on both views. The revenue
-lookup now resets on actual range changes and ignores in-flight data
-that arrives after you’ve moved on.</li>
-<li><strong>Yesterday filter now covers a full 24-hour day.</strong>
-Previously the Yesterday range was a zero-width instant, so totals
-computed against your local store returned nothing. Fixed.</li>
-<li><strong>Revenue and spend now use the same timezone.</strong>
-Revenue queries used the device’s local timezone while spend used your
-org’s reporting timezone. They now agree, so the two columns can’t
-disagree on which day a number belongs to for users whose device and org
-timezones differ.</li>
+<li><strong>ADSwift 1.0 is here.</strong> The first public launch build
+is ready for indie app developers managing Apple Search Ads.</li>
+<li><strong>New market coverage map.</strong> See where your campaigns
+are active across Apple Ads-supported countries and regions.</li>
+<li><strong>Untapped market discovery.</strong> Spot supported countries
+where you are not running campaigns yet, grouped by region and
+opportunity tier.</li>
+<li><strong>Richer country insights.</strong> Country popovers now show
+clearer market context and performance signals.</li>
+<li><strong>Yearly and lifetime plans.</strong> Choose the plan that
+fits how you want to use ADSwift.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><strong>Cleaner launch offer experience.</strong> Pricing, plan
+labels, and checkout buttons are clearer and easier to scan.</li>
+<li><strong>Faster first screen.</strong> ADSwift does less heavy
+background syncing during launch, so the main dashboard feels more
+responsive.</li>
+<li><strong>More stable table updates.</strong> Campaign, ad group,
+keyword, and search-term tables now stay steadier while filters, dates,
+and revenue data refresh.</li>
+<li><strong>Cleaner revenue loading.</strong> RevenueCat data loads in a
+calmer, more predictable way across the app.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>More reliable license activation.</strong> ADSwift now
+handles edge cases from the license service more gracefully and shows
+clearer errors when activation needs attention.</li>
+<li><strong>More reliable RevenueCat reconnects.</strong> Project and
+app loading now handles refresh timing better, reducing stale or
+confusing states.</li>
+<li><strong>More accurate loading indicators.</strong> Old background
+requests no longer interfere with newer refreshes.</li>
+<li><strong>Revenue and profit summaries stay better aligned</strong>
+with the table you are currently viewing.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/15/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/16/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="cyE4d8Vl7QjVWU/RCNyAfo5x4QWMcqaArB3sXDXJF6TJDzdGmciDymr5Xfzgiel90DIZWdHXcmbN1Yskee3+BA=="
-                 length="18337715"/>
+                 sparkle:edSignature="yPQlSX3flEe0owawduX9HdsuBHv5on/GJiisUcuNfaXEyp3OTLS3wyekkFuR4Aj2SRlGp0R8vTHGCygVpM2CCQ=="
+                 length="18573053"/>
     </item>
   </channel>
 </rss>

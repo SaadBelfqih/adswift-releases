@@ -6,40 +6,22 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 1.0.1</title>
-      <pubDate>Thu, 11 Jun 2026 12:18:05 +0000</pubDate>
-      <sparkle:version>17</sparkle:version>
-      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+      <title>Version 1.1.0</title>
+      <pubDate>Mon, 15 Jun 2026 11:38:45 +0000</pubDate>
+      <sparkle:version>18</sparkle:version>
+      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="fixed">Fixed</h3>
+      <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>More reliable Apple Ads reconnects.</strong> Campaigns, ad
-groups, keywords, and ads now stay correctly matched to the selected
-Apple Ads account after reconnecting or switching campaign groups.</li>
-<li><strong>Ad groups no longer disappear from the dashboard.</strong>
-Fixed cases where ad groups could exist locally but not show in the
-sidebar or main tables after syncing.</li>
-<li><strong>Keyword loading is more dependable.</strong> ADSwift now
-refreshes keywords when older cached rows do not belong to the currently
-selected campaign group.</li>
-</ul>
-<h3 id="improved">Improved</h3>
-<ul>
-<li><strong>Smoother app-to-All Campaigns navigation.</strong> Switching
-from a specific app back to All Campaigns feels more responsive, without
-changing the underlying data fetching.</li>
-<li><strong>Loading shimmer stays in place.</strong> Revenue and profit
-loading states keep the animated shimmer while heavier chart rendering
-waits for the first transition paint.</li>
-<li><strong>Table column preferences are more stable.</strong> Column
-visibility choices now persist more consistently across navigation and
-app relaunches.</li>
+<li><strong>ADSwift CLI is now available.</strong> Pro users can install
+the <code>adswift</code> command from Settings and use ADSwift directly
+from Terminal.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/17/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/18/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="ESNXC5Xrmfhv0H3fSulCyVHBM1+IUQBnjQI0uS4zwdopzu/QczZUeRT2mPdwhvFaj8wlGo17lT3HyKk0boimAw=="
-                 length="18579408"/>
+                 sparkle:edSignature="URP5cd4OEDFXJoE2aSHLEH8bvkkkPbYk6bTkTcnP//4Pk7URS3zQ/8QshvxGXusV/Lg1F49/Q6Jgq5L7vHFAAw=="
+                 length="19459509"/>
     </item>
   </channel>
 </rss>

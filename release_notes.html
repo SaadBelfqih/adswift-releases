@@ -80,6 +80,30 @@ code {
 </head>
 <body>
 <main>
+<h2 id="ver.-1.2.0-19062026">Ver. 1.2.0 — 19/06/2026</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li><strong>ADSwift is faster.</strong> Moving between apps, campaigns,
+ad groups, and keywords — and opening tables and the detail panel — is
+noticeably quicker and smoother.</li>
+<li><strong>A refreshed look.</strong> Cleaner typography, softer
+panels, and more refined status colors give the app a more polished
+feel.</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li><strong>The in-app AI chat has been removed.</strong> It’s replaced
+by the ADSwift CLI — a more powerful way to manage your campaigns from
+the terminal that works with any AI agent or coding assistant.</li>
+</ul>
+<h3 id="improved">Improved</h3>
+<ul>
+<li><strong>A more dependable command-line tool.</strong> The
+<code>adswift</code> CLI installs more reliably, and its
+<code>doctor</code> command now pinpoints common setup problems — like
+running from a temporary copy or a missing PATH entry — so it works the
+first time.</li>
+</ul>
 <h2 id="ver.-1.1.0-15062026">Ver. 1.1.0 — 15/06/2026</h2>
 <h3 id="added">Added</h3>
 <ul>
@@ -100,7 +124,7 @@ sidebar or main tables after syncing.</li>
 refreshes keywords when older cached rows do not belong to the currently
 selected campaign group.</li>
 </ul>
-<h3 id="improved">Improved</h3>
+<h3 id="improved-1">Improved</h3>
 <ul>
 <li><strong>Smoother app-to-All Campaigns navigation.</strong> Switching
 from a specific app back to All Campaigns feels more responsive, without
@@ -127,7 +151,7 @@ clearer market context and performance signals.</li>
 <li><strong>Yearly and lifetime plans.</strong> Choose the plan that
 fits how you want to use ADSwift.</li>
 </ul>
-<h3 id="changed">Changed</h3>
+<h3 id="changed-1">Changed</h3>
 <ul>
 <li><strong>Cleaner launch offer experience.</strong> Pricing, plan
 labels, and checkout buttons are clearer and easier to scan.</li>
@@ -221,7 +245,7 @@ of every row waiting for the slowest app.</li>
 drops and stops hammering the API; calls resume cleanly when you’re back
 online.</li>
 </ul>
-<h3 id="changed-1">Changed</h3>
+<h3 id="changed-2">Changed</h3>
 <ul>
 <li><strong>Faster and more accurate revenue in chat.</strong> Chat
 tools that report on revenue, ROAS, and keyword performance now match
@@ -273,7 +297,7 @@ USD” inline.</li>
 date picker, plus per-cell shimmer in Ad Group and Keyword tables so you
 always know what’s refreshing.</li>
 </ul>
-<h3 id="changed-2">Changed</h3>
+<h3 id="changed-3">Changed</h3>
 <ul>
 <li><strong>Every monetary value is now in your Apple Ads reporting
 currency.</strong> Spend, Avg CPA, Avg CPT, Daily Budget, Bid Amount,
@@ -322,7 +346,7 @@ pass.</li>
 <li><strong>Deleted RevenueCat projects</strong> are flagged with a
 “pick another” prompt instead of silently dropped.</li>
 </ul>
-<h3 id="changed-3">Changed</h3>
+<h3 id="changed-4">Changed</h3>
 <ul>
 <li><strong>Reconnect flow polish:</strong> skips the sign-in pitch when
 you’re already signed in, narrates progress step-by-step, marks each row
@@ -370,7 +394,7 @@ cluttering the layout.</li>
 <li><strong>First-run banner</strong> explains why Rev/Install is empty
 for fresh RevenueCat integrations until backfill completes.</li>
 </ul>
-<h3 id="changed-4">Changed</h3>
+<h3 id="changed-5">Changed</h3>
 <ul>
 <li><strong>“Source” filter renamed to “Placements”</strong> to match
 the table column header.</li>
@@ -398,7 +422,7 @@ status row to open a popover with the org name, masked Client ID, and
 Edit Credentials / Sign Out — credentials clear from Keychain but cached
 campaigns stay.</li>
 </ul>
-<h3 id="changed-5">Changed</h3>
+<h3 id="changed-6">Changed</h3>
 <ul>
 <li><strong>Sidebar collapses parallel RC syncs.</strong> When multiple
 apps are fetching, you get a single line
@@ -424,7 +448,7 @@ launch, a small popover anchored to the toolbar RevenueCat icon explains
 how to connect — and reminds you that keys are per-project (each app you
 track needs its own).</li>
 </ul>
-<h3 id="changed-6">Changed</h3>
+<h3 id="changed-7">Changed</h3>
 <ul>
 <li><strong>Faster table loads on per-app views.</strong> A single app’s
 table now requests only its own campaigns from Apple Ads instead of
@@ -451,7 +475,7 @@ one.</li>
 All-Campaigns view can’t inherit the previous app’s narrowed cache.</li>
 </ul>
 <h2 id="ver.-0.4.1-03052026">Ver. 0.4.1 — 03/05/2026</h2>
-<h3 id="changed-7">Changed</h3>
+<h3 id="changed-8">Changed</h3>
 <ul>
 <li><strong>Lower minimum macOS to 15.0 (Sequoia).</strong> ADSwift now
 runs on last year’s macOS in addition to macOS 26 Tahoe.</li>
@@ -482,7 +506,7 @@ requests run against the new one.</li>
 group, and app names in chat replies are now in-app links — clicking one
 jumps to that page in ADSwift instead of popping a new window.</li>
 </ul>
-<h3 id="changed-8">Changed</h3>
+<h3 id="changed-9">Changed</h3>
 <ul>
 <li><strong>Update checks run every 4 hours</strong> during the beta
 instead of every 24 hours, so fixes land sooner.</li>
@@ -512,7 +536,7 @@ once.</li>
 the Refresh menu wipes the local revenue cache and re-fetches from page
 1, behind a confirmation dialog.</li>
 </ul>
-<h3 id="changed-9">Changed</h3>
+<h3 id="changed-10">Changed</h3>
 <ul>
 <li><strong>RevenueCat revenue sync is dramatically faster and more
 reliable.</strong>
@@ -573,7 +597,7 @@ field.</li>
 <li><strong>Inline keyword suggestions</strong> in the keyword and
 bulk-add forms (the standalone Suggestions sheet is gone).</li>
 </ul>
-<h3 id="changed-10">Changed</h3>
+<h3 id="changed-11">Changed</h3>
 <ul>
 <li>A fresh install with no Apple Ads credentials now opens the
 <strong>Connect</strong> sheet immediately instead of populating the app

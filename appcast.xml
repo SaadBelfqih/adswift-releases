@@ -6,22 +6,39 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 1.1.0</title>
-      <pubDate>Mon, 15 Jun 2026 11:38:45 +0000</pubDate>
-      <sparkle:version>18</sparkle:version>
-      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+      <title>Version 1.2.0</title>
+      <pubDate>Fri, 19 Jun 2026 15:44:16 +0000</pubDate>
+      <sparkle:version>19</sparkle:version>
+      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="added">Added</h3>
+      <description><![CDATA[<h3 id="changed">Changed</h3>
 <ul>
-<li><strong>ADSwift CLI is now available.</strong> Pro users can install
-the <code>adswift</code> command from Settings and use ADSwift directly
-from Terminal.</li>
+<li><strong>ADSwift is faster.</strong> Moving between apps, campaigns,
+ad groups, and keywords — and opening tables and the detail panel — is
+noticeably quicker and smoother.</li>
+<li><strong>A refreshed look.</strong> Cleaner typography, softer
+panels, and more refined status colors give the app a more polished
+feel.</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li><strong>The in-app AI chat has been removed.</strong> It’s replaced
+by the ADSwift CLI — a more powerful way to manage your campaigns from
+the terminal that works with any AI agent or coding assistant.</li>
+</ul>
+<h3 id="improved">Improved</h3>
+<ul>
+<li><strong>A more dependable command-line tool.</strong> The
+<code>adswift</code> CLI installs more reliably, and its
+<code>doctor</code> command now pinpoints common setup problems — like
+running from a temporary copy or a missing PATH entry — so it works the
+first time.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/18/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/19/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="URP5cd4OEDFXJoE2aSHLEH8bvkkkPbYk6bTkTcnP//4Pk7URS3zQ/8QshvxGXusV/Lg1F49/Q6Jgq5L7vHFAAw=="
-                 length="19459509"/>
+                 sparkle:edSignature="rnzU0i7KC6epIpxMzO/TJX5JXmj3+zGgxaDTS1ygW+n+FCt2AMivAoA3VjnSMFfrGgBwmfGFM+H/dXEojdT0AA=="
+                 length="20273629"/>
     </item>
   </channel>
 </rss>

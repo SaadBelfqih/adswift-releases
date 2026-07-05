@@ -6,39 +6,45 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 1.2.0</title>
-      <pubDate>Fri, 19 Jun 2026 15:44:16 +0000</pubDate>
-      <sparkle:version>19</sparkle:version>
-      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
+      <title>Version 2.0.0</title>
+      <pubDate>Sun, 05 Jul 2026 13:52:35 +0000</pubDate>
+      <sparkle:version>20</sparkle:version>
+      <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="changed">Changed</h3>
+      <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>ADSwift is faster.</strong> Moving between apps, campaigns,
-ad groups, and keywords — and opening tables and the detail panel — is
-noticeably quicker and smoother.</li>
-<li><strong>A refreshed look.</strong> Cleaner typography, softer
-panels, and more refined status colors give the app a more polished
-feel.</li>
+<li><strong>Multiple accounts.</strong> Connect and manage several Apple
+Ads accounts in one place, and switch between them instantly from the
+sidebar. Each account’s data and credentials stay fully isolated, and
+accounts with more than one org get a built-in scope switcher.</li>
+<li><strong>Bulk negative keywords.</strong> Add several negative
+keywords at once instead of one at a time.</li>
+<li><strong>Open-ended date ranges.</strong> Report on everything “since
+a date,” in addition to the preset ranges.</li>
 </ul>
-<h3 id="removed">Removed</h3>
+<h3 id="changed">Changed</h3>
 <ul>
-<li><strong>The in-app AI chat has been removed.</strong> It’s replaced
-by the ADSwift CLI — a more powerful way to manage your campaigns from
-the terminal that works with any AI agent or coding assistant.</li>
+<li><strong>A completely redesigned interface.</strong> A flatter,
+faster, more consistent look across the sidebar, tables, toolbar, and
+dialogs — refined typography (SF Pro), pill-style controls, tinted
+status badges, and cleaner monoline icons, with new onboarding and
+paywall to match.</li>
+<li><strong>Reworked date and filter controls,</strong> grouped into
+clear, consistent dropdown pills.</li>
 </ul>
 <h3 id="improved">Improved</h3>
 <ul>
-<li><strong>A more dependable command-line tool.</strong> The
-<code>adswift</code> CLI installs more reliably, and its
-<code>doctor</code> command now pinpoints common setup problems — like
-running from a temporary copy or a missing PATH entry — so it works the
-first time.</li>
+<li><strong>Gentler error handling.</strong> When a metrics load fails,
+ADSwift now shows a quiet banner with Retry / Details / Report instead
+of interrupting you with a modal.</li>
+<li><strong>Clearer match-type controls</strong> and consistent action
+buttons across the app’s sheets and dialogs.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/19/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/20/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="rnzU0i7KC6epIpxMzO/TJX5JXmj3+zGgxaDTS1ygW+n+FCt2AMivAoA3VjnSMFfrGgBwmfGFM+H/dXEojdT0AA=="
-                 length="20273629"/>
+                 sparkle:edSignature="lRLNahCup451irn8PP8SLBRP2yv/dfV6do1QVrgLUDuCbye3ri2cvxM0GaXpFVwmZT5aH9d/7/9fuvwnMJzPCg=="
+                 length="21713156"/>
     </item>
   </channel>
 </rss>

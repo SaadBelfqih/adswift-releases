@@ -6,45 +6,56 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 2.0.0</title>
-      <pubDate>Sun, 05 Jul 2026 13:52:35 +0000</pubDate>
-      <sparkle:version>20</sparkle:version>
-      <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
+      <title>Version 2.1.0</title>
+      <pubDate>Thu, 16 Jul 2026 11:55:33 +0000</pubDate>
+      <sparkle:version>21</sparkle:version>
+      <sparkle:shortVersionString>2.1.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Multiple accounts.</strong> Connect and manage several Apple
-Ads accounts in one place, and switch between them instantly from the
-sidebar. Each account’s data and credentials stay fully isolated, and
-accounts with more than one org get a built-in scope switcher.</li>
-<li><strong>Bulk negative keywords.</strong> Add several negative
-keywords at once instead of one at a time.</li>
-<li><strong>Open-ended date ranges.</strong> Report on everything “since
-a date,” in addition to the preset ranges.</li>
-</ul>
-<h3 id="changed">Changed</h3>
-<ul>
-<li><strong>A completely redesigned interface.</strong> A flatter,
-faster, more consistent look across the sidebar, tables, toolbar, and
-dialogs — refined typography (SF Pro), pill-style controls, tinted
-status badges, and cleaner monoline icons, with new onboarding and
-paywall to match.</li>
-<li><strong>Reworked date and filter controls,</strong> grouped into
-clear, consistent dropdown pills.</li>
+<li><strong>Launch a campaign step by step.</strong> A new guided
+launcher walks you from an app to live campaigns: pick the app and a
+strategy, choose your markets, research keywords country by country, set
+your budgets, and see the whole plan before any of it exists. Campaigns
+are created paused, with progress for each one and an undo, so nothing
+starts spending until you decide it should.</li>
+<li><strong>See how big a market is before you enter it.</strong> The
+world map can now size countries by population instead of your spend,
+and each country shows its market context as you hover. These are
+bundled third-party estimates rather than Apple Ads data, and any market
+without a credible published figure is left out rather than guessed
+at.</li>
+<li><strong>Pause campaigns, ad groups, keywords, and ads from the
+command line.</strong> The <code>adswift</code> CLI can now pause
+anything that’s spending — right from the terminal — so you can stop
+spend fast. Turning things back on still happens in the app, where you
+can review the full picture before money starts flowing again.</li>
 </ul>
 <h3 id="improved">Improved</h3>
 <ul>
-<li><strong>Gentler error handling.</strong> When a metrics load fails,
-ADSwift now shows a quiet banner with Retry / Details / Report instead
-of interrupting you with a modal.</li>
-<li><strong>Clearer match-type controls</strong> and consistent action
-buttons across the app’s sheets and dialogs.</li>
+<li><strong>A more up-to-date command-line tool.</strong> A new
+<code>adswift refresh</code> command pulls the latest campaign, ad
+group, and keyword data on demand, the CLI now recovers automatically
+when it’s looking at something created moments ago elsewhere, and its
+messages make it clearer when data might be a little stale.</li>
+<li><strong>Your campaigns stay on screen while they refresh.</strong>
+Switching campaign groups — or reloading — no longer blanks the table
+out to a placeholder. The rows you were reading stay put and the numbers
+fill in as they arrive.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>Apps that run in more than one campaign group.</strong> When
+the same app has campaigns in two campaign groups, selecting it in one
+group no longer highlights it in the other. Each group’s copy of the app
+is now selected, expanded, and switched to independently — including
+apps you’ve added to a group that has no campaigns yet.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/20/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/21/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="lRLNahCup451irn8PP8SLBRP2yv/dfV6do1QVrgLUDuCbye3ri2cvxM0GaXpFVwmZT5aH9d/7/9fuvwnMJzPCg=="
-                 length="21713156"/>
+                 sparkle:edSignature="g5LwaRSI2jyghdYKT/KGvwb7IiFnGVe7zndsPlFJIGp8lMHVlloanldGDsYaTqdsA/VJGsgI1QIwqynUuYZmAA=="
+                 length="23249251"/>
     </item>
   </channel>
 </rss>

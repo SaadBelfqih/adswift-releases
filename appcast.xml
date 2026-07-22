@@ -6,56 +6,75 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 2.1.0</title>
-      <pubDate>Thu, 16 Jul 2026 11:55:33 +0000</pubDate>
-      <sparkle:version>21</sparkle:version>
-      <sparkle:shortVersionString>2.1.0</sparkle:shortVersionString>
+      <title>Version 2.2.0</title>
+      <pubDate>Wed, 22 Jul 2026 18:35:56 +0000</pubDate>
+      <sparkle:version>22</sparkle:version>
+      <sparkle:shortVersionString>2.2.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Launch a campaign step by step.</strong> A new guided
-launcher walks you from an app to live campaigns: pick the app and a
-strategy, choose your markets, research keywords country by country, set
-your budgets, and see the whole plan before any of it exists. Campaigns
-are created paused, with progress for each one and an undo, so nothing
-starts spending until you decide it should.</li>
-<li><strong>See how big a market is before you enter it.</strong> The
-world map can now size countries by population instead of your spend,
-and each country shows its market context as you hover. These are
-bundled third-party estimates rather than Apple Ads data, and any market
-without a credible published figure is left out rather than guessed
-at.</li>
-<li><strong>Pause campaigns, ad groups, keywords, and ads from the
-command line.</strong> The <code>adswift</code> CLI can now pause
-anything that’s spending — right from the terminal — so you can stop
-spend fast. Turning things back on still happens in the app, where you
-can review the full picture before money starts flowing again.</li>
+<li><strong>Keyword Impression Share.</strong> See Apple Ads
+impression-share ranges directly in keyword and search-term tables,
+alongside Rank and Search Popularity. Open any value for its recent
+trend, coverage details, and last-updated date.</li>
+<li><strong>Change History.</strong> Campaigns, ad groups, and keywords
+now keep a local history of bid, budget, and status changes. The History
+inspector includes edits made in ADSwift and changes detected during
+refreshes from Apple Ads.</li>
+<li><strong>More control over the sidebar.</strong> New View Options let
+you hide apps and reduce visual clutter while keeping their campaign
+data available.</li>
+<li><strong>Clearer drill-down context.</strong> Campaign and ad-group
+screens now show a compact breadcrumb and status strip, making it easier
+to understand where you are.</li>
 </ul>
 <h3 id="improved">Improved</h3>
 <ul>
-<li><strong>A more up-to-date command-line tool.</strong> A new
-<code>adswift refresh</code> command pulls the latest campaign, ad
-group, and keyword data on demand, the CLI now recovers automatically
-when it’s looking at something created moments ago elsewhere, and its
-messages make it clearer when data might be a little stale.</li>
-<li><strong>Your campaigns stay on screen while they refresh.</strong>
-Switching campaign groups — or reloading — no longer blanks the table
-out to a placeholder. The rows you were reading stay put and the numbers
-fill in as they arrive.</li>
+<li><strong>RevenueCat revenue loads significantly faster.</strong> Cold
+campaign and ad-group revenue loaded around twice as fast in tested
+flows. RevenueCat projects can load concurrently, and an ad group you
+open is prioritized over background work from its campaign.</li>
+<li><strong>Faster navigation and tables.</strong> Opening campaigns, ad
+groups, keywords, and the inspector now performs less repeated database
+and layout work, especially while metrics are still streaming.</li>
+<li><strong>Tables fit their content better.</strong> Numeric and
+supporting columns resize more naturally, keep consistent typography,
+and avoid oversized or disappearing headers.</li>
+<li><strong>Impression Share exports.</strong> CSV exports can now
+include impression share, rank, popularity, status, country scope, and
+the date represented by the report.</li>
+<li><strong>Clearer account and loading status.</strong> Apple Ads
+connectivity, refresh progress, and RevenueCat loading are now grouped
+into a cleaner status area.</li>
+<li><strong>Progressive leaderboard revenue.</strong> Ad-group
+leaderboard rows populate as their revenue becomes available instead of
+waiting for the entire list.</li>
+<li><strong>New apps connect to revenue automatically.</strong> When
+possible, ADSwift now finds and preserves the matching RevenueCat
+project for an app you add.</li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li><strong>Apps that run in more than one campaign group.</strong> When
-the same app has campaigns in two campaign groups, selecting it in one
-group no longer highlights it in the other. Each group’s copy of the app
-is now selected, expanded, and switched to independently — including
-apps you’ve added to a group that has no campaigns yet.</li>
+<li><strong>More reliable RevenueCat connections.</strong> Project
+mappings are preserved when a token is rejected, unfinished revenue
+providers no longer appear, and RevenueCat prompts no longer interfere
+with adding an Apple Ads account.</li>
+<li><strong>Product Page campaign creation.</strong> Creating a Product
+Page campaign no longer clears its intended targeting.</li>
+<li><strong>More stable account switching.</strong> Campaign groups and
+account subtrees remain visible and correctly scoped while changing
+accounts.</li>
+<li><strong>More dependable table navigation.</strong> Fixed
+disappearing column headers, keyword inspector reset loops, and
+navigation stalls caused by background metrics updates.</li>
+<li><strong>RevenueCat guidance stays dismissed.</strong> The connection
+tip no longer reappears after you dismiss it.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/21/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/22/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="g5LwaRSI2jyghdYKT/KGvwb7IiFnGVe7zndsPlFJIGp8lMHVlloanldGDsYaTqdsA/VJGsgI1QIwqynUuYZmAA=="
-                 length="23249251"/>
+                 sparkle:edSignature="2CA7dOYeuYqKeF3suW7uPYe8F9UsuItB9eaO0MbGcBohP5UtTCa+gvnEOQNOKkgxX0G/QSDux4TSfBuCLdkaBg=="
+                 length="24443549"/>
     </item>
   </channel>
 </rss>

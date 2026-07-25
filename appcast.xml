@@ -6,75 +6,85 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 2.2.0</title>
-      <pubDate>Wed, 22 Jul 2026 18:35:56 +0000</pubDate>
-      <sparkle:version>22</sparkle:version>
-      <sparkle:shortVersionString>2.2.0</sparkle:shortVersionString>
+      <title>Version 2.3.0</title>
+      <pubDate>Sat, 25 Jul 2026 21:10:01 +0000</pubDate>
+      <sparkle:version>23</sparkle:version>
+      <sparkle:shortVersionString>2.3.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<h3 id="added">Added</h3>
 <ul>
-<li><strong>Keyword Impression Share.</strong> See Apple Ads
-impression-share ranges directly in keyword and search-term tables,
-alongside Rank and Search Popularity. Open any value for its recent
-trend, coverage details, and last-updated date.</li>
-<li><strong>Change History.</strong> Campaigns, ad groups, and keywords
-now keep a local history of bid, budget, and status changes. The History
-inspector includes edits made in ADSwift and changes detected during
-refreshes from Apple Ads.</li>
-<li><strong>More control over the sidebar.</strong> New View Options let
-you hide apps and reduce visual clutter while keeping their campaign
-data available.</li>
-<li><strong>Clearer drill-down context.</strong> Campaign and ad-group
-screens now show a compact breadcrumb and status strip, making it easier
-to understand where you are.</li>
+<li><strong>Set daily budgets for a whole selection at once.</strong>
+Select any number of campaigns and set, raise, or lower their daily
+budget in one step, with a preview before anything is applied.
+Percentage changes keep each campaign in its own currency, campaigns
+without a budget are skipped rather than guessed at, and large or steep
+changes ask first.</li>
+<li><strong>Copy keywords.</strong> Copy a single keyword or a whole
+selection from the keyword, negative-keyword, and search-term tables.
+Multiple items are copied comma-separated, ready to paste
+elsewhere.</li>
+<li><strong>Open a row by double-clicking anywhere on it.</strong>
+Double-clicking a campaign opens its ad groups, an ad group opens its
+keywords, and a keyword opens for editing. Previously only the name
+itself responded, so clicking a row’s numbers appeared to do
+nothing.</li>
+<li><strong>Charts scoped to what you’re looking at.</strong> Charts can
+now be focused on a single app, campaign, or ad group, with a scope
+picker and breadcrumb.</li>
 </ul>
 <h3 id="improved">Improved</h3>
 <ul>
-<li><strong>RevenueCat revenue loads significantly faster.</strong> Cold
-campaign and ad-group revenue loaded around twice as fast in tested
-flows. RevenueCat projects can load concurrently, and an ad group you
-open is prioritized over background work from its campaign.</li>
-<li><strong>Faster navigation and tables.</strong> Opening campaigns, ad
-groups, keywords, and the inspector now performs less repeated database
-and layout work, especially while metrics are still streaming.</li>
-<li><strong>Tables fit their content better.</strong> Numeric and
-supporting columns resize more naturally, keep consistent typography,
-and avoid oversized or disappearing headers.</li>
-<li><strong>Impression Share exports.</strong> CSV exports can now
-include impression share, rank, popularity, status, country scope, and
-the date represented by the report.</li>
-<li><strong>Clearer account and loading status.</strong> Apple Ads
-connectivity, refresh progress, and RevenueCat loading are now grouped
-into a cleaner status area.</li>
-<li><strong>Progressive leaderboard revenue.</strong> Ad-group
-leaderboard rows populate as their revenue becomes available instead of
-waiting for the entire list.</li>
-<li><strong>New apps connect to revenue automatically.</strong> When
-possible, ADSwift now finds and preserves the matching RevenueCat
-project for an app you add.</li>
+<li><strong>Revenue connects itself for apps you’ve just
+launched.</strong> When a new app arrives through a sync, ADSwift now
+tries to match it to its RevenueCat project automatically instead of
+waiting until you next open Settings. You can also refresh the project
+list on demand — previously the only way to pick up a project you’d just
+created was to disconnect and sign in again.</li>
+<li><strong>Your status filter is remembered.</strong> Hiding paused
+campaigns, ad groups, or keywords now survives a relaunch instead of
+resetting to All.</li>
+<li><strong>Pausing and enabling from a table row feels
+immediate.</strong> The row now acknowledges your click straight away
+and updates as soon as Apple accepts the change, instead of sitting
+still while it waited for a second round trip.</li>
+<li><strong>The Settings window can be resized.</strong> The Accounts
+tab no longer clips its list of apps.</li>
+<li><strong>Interface polish.</strong> Selected rows use a neutral
+highlight that belongs to the table rather than a saturated blue band;
+the bulk-action bar and the Adjust Bids control now match the surfaces
+beside them; and View Charts has moved into the overflow menu so long
+names have room.</li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li><strong>More reliable RevenueCat connections.</strong> Project
-mappings are preserved when a token is rejected, unfinished revenue
-providers no longer appear, and RevenueCat prompts no longer interfere
-with adding an Apple Ads account.</li>
-<li><strong>Product Page campaign creation.</strong> Creating a Product
-Page campaign no longer clears its intended targeting.</li>
-<li><strong>More stable account switching.</strong> Campaign groups and
-account subtrees remain visible and correctly scoped while changing
-accounts.</li>
-<li><strong>More dependable table navigation.</strong> Fixed
-disappearing column headers, keyword inspector reset loops, and
-navigation stalls caused by background metrics updates.</li>
-<li><strong>RevenueCat guidance stays dismissed.</strong> The connection
-tip no longer reappears after you dismiss it.</li>
+<li><strong>Revenue is never shown as zero when it isn’t actually
+known.</strong> If revenue can’t be fetched for an app, ADSwift now says
+so and retries instead of quietly displaying nothing — which was
+indistinguishable from an app that genuinely earned nothing, and could
+stick until you changed the date range. Totals no longer present a
+partial sum as if it were complete, ROAS and profit no longer report
+confident figures built on missing revenue, and CSV exports mark
+unavailable values rather than exporting them as zero.</li>
+<li><strong>Revenue keeps up with the date range.</strong> Switching
+ranges no longer leaves the previous range’s revenue on screen or blank
+until a manual reload.</li>
+<li><strong>Campaigns deleted in Apple Ads now disappear when you
+sync</strong>, together with their ad groups and keywords.</li>
+<li><strong>Deleting a campaign no longer crashes the app</strong>,
+whether from the table or with the detail panel open.</li>
+<li><strong>Selecting several campaigns with Command-click
+sticks.</strong> Adding a second row no longer cleared the whole
+selection a moment later, which made bulk actions unusable without a
+workaround.</li>
+<li><strong>Maximize Conversions campaigns are set up
+correctly</strong>, including the automated ad group Apple
+requires.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/22/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/23/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="2CA7dOYeuYqKeF3suW7uPYe8F9UsuItB9eaO0MbGcBohP5UtTCa+gvnEOQNOKkgxX0G/QSDux4TSfBuCLdkaBg=="
-                 length="24443549"/>
+                 sparkle:edSignature="RqQDZZNJmv4ZmHoIJpDp+GPIHk9dSlIWnqjJhJ9HAdUBnQJvcVfO54OA94b62m0wz5r717wLDniSj8U5xkkBBQ=="
+                 length="25302080"/>
     </item>
   </channel>
 </rss>

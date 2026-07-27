@@ -80,6 +80,44 @@ code {
 </head>
 <body>
 <main>
+<h2 id="ver.-2.3.1-27072026">Ver. 2.3.1 — 27/07/2026</h2>
+<h3 id="improved">Improved</h3>
+<ul>
+<li><strong>Apps show their real names and icons.</strong> Placeholders
+like “App 6767…” now resolve — and stay resolved between launches —
+instead of sticking for the session. An app stuck on a placeholder could
+never match its RevenueCat project automatically.</li>
+<li><strong>Other workspaces keep their apps in view.</strong> They no
+longer collapse to a bare row on switch, and clicking one goes straight
+to that app’s campaigns instead of the full list.</li>
+<li><strong>The map opens on your whole account,</strong> with zoom
+controls on the map.</li>
+<li><strong>Money figures are easier to read</strong> on dark
+backgrounds, and now meet contrast guidelines in light mode.</li>
+<li><strong>The exchange-rate badge only appears when rates are
+stale,</strong> rather than permanently confirming they’re fine.</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>Keyword ROAS no longer credits one arbitrary
+keyword.</strong> The same keyword text running in several campaigns had
+its revenue given to one keyword at random, measured against only that
+keyword’s spend — inflating one and zeroing its twins. Revenue is now
+measured against the spend of every keyword using that text.</li>
+<li><strong>Campaigns deleted in Apple Ads disappear.</strong> Emptying
+a campaign group left every campaign on screen marked Running, with no
+way to clear them.</li>
+<li><strong>One workspace’s apps no longer appear in another’s</strong>
+when connecting RevenueCat.</li>
+<li><strong>A rejected sign-in is no longer reported as
+connected.</strong> Credentials are checked before they’re saved, so a
+damaged key — often from copying it out of a screenshot — is caught
+immediately.</li>
+<li><strong>The sidebar scrolls to the end again</strong> when group
+labels are hidden.</li>
+<li><strong>Automatic project matching no longer picks at
+random</strong> when an app appears in two RevenueCat projects.</li>
+</ul>
 <h2 id="ver.-2.3.0-25072026">Ver. 2.3.0 — 25/07/2026</h2>
 <h3 id="added">Added</h3>
 <ul>
@@ -102,7 +140,7 @@ nothing.</li>
 now be focused on a single app, campaign, or ad group, with a scope
 picker and breadcrumb.</li>
 </ul>
-<h3 id="improved">Improved</h3>
+<h3 id="improved-1">Improved</h3>
 <ul>
 <li><strong>Revenue connects itself for apps you’ve just
 launched.</strong> When a new app arrives through a sync, ADSwift now
@@ -125,7 +163,7 @@ the bulk-action bar and the Adjust Bids control now match the surfaces
 beside them; and View Charts has moved into the overflow menu so long
 names have room.</li>
 </ul>
-<h3 id="fixed">Fixed</h3>
+<h3 id="fixed-1">Fixed</h3>
 <ul>
 <li><strong>Revenue is never shown as zero when it isn’t actually
 known.</strong> If revenue can’t be fetched for an app, ADSwift now says
@@ -168,7 +206,7 @@ data available.</li>
 screens now show a compact breadcrumb and status strip, making it easier
 to understand where you are.</li>
 </ul>
-<h3 id="improved-1">Improved</h3>
+<h3 id="improved-2">Improved</h3>
 <ul>
 <li><strong>RevenueCat revenue loads significantly faster.</strong> Cold
 campaign and ad-group revenue loaded around twice as fast in tested
@@ -193,7 +231,7 @@ waiting for the entire list.</li>
 possible, ADSwift now finds and preserves the matching RevenueCat
 project for an app you add.</li>
 </ul>
-<h3 id="fixed-1">Fixed</h3>
+<h3 id="fixed-2">Fixed</h3>
 <ul>
 <li><strong>More reliable RevenueCat connections.</strong> Project
 mappings are preserved when a token is rejected, unfinished revenue
@@ -231,7 +269,7 @@ anything that’s spending — right from the terminal — so you can stop
 spend fast. Turning things back on still happens in the app, where you
 can review the full picture before money starts flowing again.</li>
 </ul>
-<h3 id="improved-2">Improved</h3>
+<h3 id="improved-3">Improved</h3>
 <ul>
 <li><strong>A more up-to-date command-line tool.</strong> A new
 <code>adswift refresh</code> command pulls the latest campaign, ad
@@ -243,7 +281,7 @@ Switching campaign groups — or reloading — no longer blanks the table
 out to a placeholder. The rows you were reading stay put and the numbers
 fill in as they arrive.</li>
 </ul>
-<h3 id="fixed-2">Fixed</h3>
+<h3 id="fixed-3">Fixed</h3>
 <ul>
 <li><strong>Apps that run in more than one campaign group.</strong> When
 the same app has campaigns in two campaign groups, selecting it in one
@@ -273,7 +311,7 @@ paywall to match.</li>
 <li><strong>Reworked date and filter controls,</strong> grouped into
 clear, consistent dropdown pills.</li>
 </ul>
-<h3 id="improved-3">Improved</h3>
+<h3 id="improved-4">Improved</h3>
 <ul>
 <li><strong>Gentler error handling.</strong> When a metrics load fails,
 ADSwift now shows a quiet banner with Retry / Details / Report instead
@@ -297,7 +335,7 @@ feel.</li>
 by the ADSwift CLI — a more powerful way to manage your campaigns from
 the terminal that works with any AI agent or coding assistant.</li>
 </ul>
-<h3 id="improved-4">Improved</h3>
+<h3 id="improved-5">Improved</h3>
 <ul>
 <li><strong>A more dependable command-line tool.</strong> The
 <code>adswift</code> CLI installs more reliably, and its
@@ -313,7 +351,7 @@ the <code>adswift</code> command from Settings and use ADSwift directly
 from Terminal.</li>
 </ul>
 <h2 id="ver.-1.0.1-11062026">Ver. 1.0.1 — 11/06/2026</h2>
-<h3 id="fixed-3">Fixed</h3>
+<h3 id="fixed-4">Fixed</h3>
 <ul>
 <li><strong>More reliable Apple Ads reconnects.</strong> Campaigns, ad
 groups, keywords, and ads now stay correctly matched to the selected
@@ -325,7 +363,7 @@ sidebar or main tables after syncing.</li>
 refreshes keywords when older cached rows do not belong to the currently
 selected campaign group.</li>
 </ul>
-<h3 id="improved-5">Improved</h3>
+<h3 id="improved-6">Improved</h3>
 <ul>
 <li><strong>Smoother app-to-All Campaigns navigation.</strong> Switching
 from a specific app back to All Campaigns feels more responsive, without
@@ -365,7 +403,7 @@ and revenue data refresh.</li>
 <li><strong>Cleaner revenue loading.</strong> RevenueCat data loads in a
 calmer, more predictable way across the app.</li>
 </ul>
-<h3 id="fixed-4">Fixed</h3>
+<h3 id="fixed-5">Fixed</h3>
 <ul>
 <li><strong>More reliable license activation.</strong> ADSwift now
 handles edge cases from the license service more gracefully and shows
@@ -379,7 +417,7 @@ requests no longer interfere with newer refreshes.</li>
 with the table you are currently viewing.</li>
 </ul>
 <h2 id="ver.-0.8.3-23052026">Ver. 0.8.3 — 23/05/2026</h2>
-<h3 id="fixed-5">Fixed</h3>
+<h3 id="fixed-6">Fixed</h3>
 <ul>
 <li><strong>Fix crash on launch for users with duplicate
 records.</strong> A startup crash that hit users whose local store
@@ -401,7 +439,7 @@ disagree on which day a number belongs to for users whose device and org
 timezones differ.</li>
 </ul>
 <h2 id="ver.-0.8.2-22052026">Ver. 0.8.2 — 22/05/2026</h2>
-<h3 id="fixed-6">Fixed</h3>
+<h3 id="fixed-7">Fixed</h3>
 <ul>
 <li><strong>Mac Dock icon appearance.</strong> ADSwift’s Dock icon now
 keeps its intended rounded app-icon shape on macOS.</li>
@@ -410,7 +448,7 @@ stay readable when the window is resized, instead of overlapping or
 collapsing into clipped text.</li>
 </ul>
 <h2 id="ver.-0.8.1-21052026">Ver. 0.8.1 — 21/05/2026</h2>
-<h3 id="fixed-7">Fixed</h3>
+<h3 id="fixed-8">Fixed</h3>
 <ul>
 <li><strong>Accurate Conversion Rate and TTR on multi-day date
 ranges.</strong> The Conv. Rate and TTR columns in the campaigns, ad
@@ -460,7 +498,7 @@ on instead of a wall of stack trace.</li>
 thinking…]” status text is scrubbed from saved messages and no longer
 shows up in new ones.</li>
 </ul>
-<h3 id="fixed-8">Fixed</h3>
+<h3 id="fixed-9">Fixed</h3>
 <ul>
 <li><strong>Revenue values now appear on first visit to Ad Groups and
 Keywords.</strong> Previously, opening Ad Groups (or Keywords) from a
@@ -518,7 +556,7 @@ the chart together instead of just the inspector chart.</li>
 <li><strong>Settings → Connections</strong> now shows your reporting
 currency next to the connected org.</li>
 </ul>
-<h3 id="fixed-9">Fixed</h3>
+<h3 id="fixed-10">Fixed</h3>
 <ul>
 <li><strong>All Campaigns shows revenue right away on launch</strong>
 instead of needing you to click into an app and back.</li>
@@ -535,7 +573,7 @@ app</strong> when switching between apps.</li>
 now use the install- / tap-weighted formula.</li>
 </ul>
 <h2 id="ver.-0.6.1-08052026">Ver. 0.6.1 — 08/05/2026</h2>
-<h3 id="fixed-10">Fixed</h3>
+<h3 id="fixed-11">Fixed</h3>
 <ul>
 <li><strong>RevenueCat reconnect no longer lands on an empty “No iOS
 apps to map yet” screen</strong> when your apps came from Apple Ads
@@ -635,7 +673,7 @@ Apps with stale data queue a delta refresh automatically — no more
 <li>Removed the <code>X customers · Y attributed</code> line from the
 sidebar fetch status.</li>
 </ul>
-<h3 id="fixed-11">Fixed</h3>
+<h3 id="fixed-12">Fixed</h3>
 <ul>
 <li><strong>Resumes interrupted RevenueCat syncs.</strong> Quit mid-sync
 and the next launch picks up from the saved cursor instead of starting
@@ -663,7 +701,7 @@ changes.</li>
 (Today / Yesterday, and ranges over ~90 days) instead of filling the row
 with em-dashes.</li>
 </ul>
-<h3 id="fixed-12">Fixed</h3>
+<h3 id="fixed-13">Fixed</h3>
 <ul>
 <li><strong>Empty or errored metric cells no longer shimmer
 forever.</strong> Campaigns, ad groups, and keywords with no spend in
@@ -685,7 +723,7 @@ between a specific app and All Campaigns now repaints the sidebar
 selection instantly instead of waiting for the table to re-render, so
 clicks no longer feel stuck.</li>
 </ul>
-<h3 id="fixed-13">Fixed</h3>
+<h3 id="fixed-14">Fixed</h3>
 <ul>
 <li><strong>All Campaigns</strong> view: the RC Revenue column now
 refreshes when you switch from a per-app view, instead of briefly
@@ -715,7 +753,7 @@ instead of every 24 hours, so fixes land sooner.</li>
 “the report for last week and bump campaign X to $30” now executes both
 actions in a single round trip in the order you asked.</li>
 </ul>
-<h3 id="fixed-14">Fixed</h3>
+<h3 id="fixed-15">Fixed</h3>
 <ul>
 <li><strong>All Campaigns</strong> view: the RC Revenue column now
 totals across every app instead of being silently scoped to whichever
@@ -765,7 +803,7 @@ other apps. Existing data is migrated automatically on first launch.
 Downgrading to an older build after this version will show an empty
 database.</li>
 </ul>
-<h3 id="fixed-15">Fixed</h3>
+<h3 id="fixed-16">Fixed</h3>
 <ul>
 <li>Reloading after a partially completed sync no longer crashes when
 duplicate ad-group/keyword rows are present — the duplicates are merged
@@ -811,7 +849,7 @@ endpoints (OpenRouter and similar). The direct OpenAI and Anthropic
 providers were removed — use OpenAI-Compatible with their endpoint URL
 instead.</li>
 </ul>
-<h3 id="fixed-16">Fixed</h3>
+<h3 id="fixed-17">Fixed</h3>
 <ul>
 <li>Per-keyword RevenueCat revenue now matches reliably across ad groups
 (was occasionally missing or mis-scoped).</li>

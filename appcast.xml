@@ -6,53 +6,56 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 2.3.1</title>
-      <pubDate>Mon, 27 Jul 2026 22:40:55 +0000</pubDate>
-      <sparkle:version>24</sparkle:version>
-      <sparkle:shortVersionString>2.3.1</sparkle:shortVersionString>
+      <title>Version 2.4.0</title>
+      <pubDate>Sun, 06 Sep 2026 16:33:58 +0000</pubDate>
+      <sparkle:version>25</sparkle:version>
+      <sparkle:shortVersionString>2.4.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
-      <description><![CDATA[<h3 id="improved">Improved</h3>
+      <description><![CDATA[<blockquote>
+<p><strong>A quick note.</strong> It’s been quiet here for a few weeks,
+for reasons outside my control — sorry about that. I’m still very much
+building ADSwift. Almost everything below came from someone writing in
+about something that was broken or missing, so please keep sending
+those. — Saad</p>
+</blockquote>
+<h3 id="added">Added</h3>
 <ul>
-<li><strong>Apps show their real names and icons.</strong> Placeholders
-like “App 6767…” now resolve — and stay resolved between launches —
-instead of sticking for the session. An app stuck on a placeholder could
-never match its RevenueCat project automatically.</li>
-<li><strong>Other workspaces keep their apps in view.</strong> They no
-longer collapse to a bare row on switch, and clicking one goes straight
-to that app’s campaigns instead of the full list.</li>
-<li><strong>The map opens on your whole account,</strong> with zoom
-controls on the map.</li>
-<li><strong>Money figures are easier to read</strong> on dark
-backgrounds, and now meet contrast guidelines in light mode.</li>
-<li><strong>The exchange-rate badge only appears when rates are
-stale,</strong> rather than permanently confirming they’re fine.</li>
+<li><strong>Add negative keywords while you create a campaign.</strong>
+The create form now takes a pasted or typed list of negative keywords
+with a match type, and applies it to each campaign as it’s made.
+Previously they could only be added once the campaign already
+existed.</li>
+</ul>
+<h3 id="improved">Improved</h3>
+<ul>
+<li><strong>Daily budgets are editable without selecting anything
+first.</strong> A “Daily Budgets” button now sits in the toolbar next to
+the ad group table’s Adjust Bids, and appears in the right-click menu
+and the Adjust menu. With nothing selected it edits every campaign in
+view; select two or more and it narrows to those.</li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li><strong>Keyword ROAS no longer credits one arbitrary
-keyword.</strong> The same keyword text running in several campaigns had
-its revenue given to one keyword at random, measured against only that
-keyword’s spend — inflating one and zeroing its twins. Revenue is now
-measured against the spend of every keyword using that text.</li>
-<li><strong>Campaigns deleted in Apple Ads disappear.</strong> Emptying
-a campaign group left every campaign on screen marked Running, with no
-way to clear them.</li>
-<li><strong>One workspace’s apps no longer appear in another’s</strong>
-when connecting RevenueCat.</li>
-<li><strong>A rejected sign-in is no longer reported as
-connected.</strong> Credentials are checked before they’re saved, so a
-damaged key — often from copying it out of a screenshot — is caught
-immediately.</li>
-<li><strong>The sidebar scrolls to the end again</strong> when group
-labels are hidden.</li>
-<li><strong>Automatic project matching no longer picks at
-random</strong> when an app appears in two RevenueCat projects.</li>
+<li><strong>Duplicating a campaign that has already run works
+again.</strong> Any copy of a live campaign was rejected outright for
+having a start date in the past. Copies now start from today, and run
+open-ended when the original’s schedule has already closed.</li>
+<li><strong>A brief connection problem no longer marks an account with a
+permanent sync error.</strong> A rate limit or a temporary outage was
+recorded as though your credentials had been refused, and nothing could
+clear it afterwards. Only an actual refusal counts now, a successful
+refresh clears the warning on its own, and the account shows what was
+reported back.</li>
+<li><strong>The custom product page you pick is the one you
+see.</strong> Choosing a custom product page in the New Ad or New Ad
+Group form left the screenshots below it showing the app’s default
+listing, so a second page looked like it had never loaded.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/24/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/25/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="rt5wRzMfB0faxcbTBKFaGe1bL5QcR3g6Nr3xLaLOjlSZbQTviH0QD+I4BjmC1d0McX73epCVAuuMqH0/3oEXDw=="
-                 length="25447992"/>
+                 sparkle:edSignature="2/rQbtWp4TzmYCe/kVCVv1KHqoSdm2/jkE2q8r6LU8iUbOPMQDW3mdbbp5TocQUfG2iXgL731ZX49OSQKScYDQ=="
+                 length="25568951"/>
     </item>
   </channel>
 </rss>

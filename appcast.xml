@@ -6,56 +6,77 @@
     <description>Most recent update for ADSwift.</description>
     <language>en</language>
     <item>
-      <title>Version 2.4.0</title>
-      <pubDate>Sun, 06 Sep 2026 16:33:58 +0000</pubDate>
-      <sparkle:version>25</sparkle:version>
-      <sparkle:shortVersionString>2.4.0</sparkle:shortVersionString>
+      <title>Version 3.0.0</title>
+      <pubDate>Thu, 19 Nov 2026 17:17:31 +0000</pubDate>
+      <sparkle:version>26</sparkle:version>
+      <sparkle:shortVersionString>3.0.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <sparkle:criticalUpdate sparkle:version="26"></sparkle:criticalUpdate>
       <sparkle:releaseNotesLink>https://saadbelfqih.github.io/adswift-releases/release_notes.html</sparkle:releaseNotesLink>
       <description><![CDATA[<blockquote>
-<p><strong>A quick note.</strong> It’s been quiet here for a few weeks,
-for reasons outside my control — sorry about that. I’m still very much
-building ADSwift. Almost everything below came from someone writing in
-about something that was broken or missing, so please keep sending
-those. — Saad</p>
+<p><strong>Apple is retiring the Apple Ads API that ADSwift uses today
+on 26 January 2027.</strong> This update adds support for the new one.
+It’s off for now, so nothing changes until you choose to try it. You can
+switch back at any time, and your data and history stay as they are.</p>
 </blockquote>
 <h3 id="added">Added</h3>
 <ul>
-<li><strong>Add negative keywords while you create a campaign.</strong>
-The create form now takes a pasted or typed list of negative keywords
-with a match type, and applies it to each campaign as it’s made.
-Previously they could only be added once the campaign already
-existed.</li>
+<li><strong>A switch for the new Apple Ads API (beta).</strong> It’s in
+the Apple Ads status menu at the bottom of the window and in Settings →
+General. Turn it on to try the new API before it becomes the only
+one.</li>
+<li><strong>An “All ad positions” impression share column.</strong> With
+the new API, impression share shows exact percentages and your rank,
+both for the top of search results and across all ad positions.</li>
+<li><strong>See why a campaign is Limited or On Hold.</strong> With the
+new Apple Ads API, a small button next to the status shows Apple’s
+reasons — which countries are affected and what to do about each — for
+campaigns, ad groups and ads. Limited and On Hold now also have
+different colours.</li>
+<li><strong>Notes on campaigns, ad groups, keywords and negative
+keywords.</strong> Right-click and choose Add Note. A note icon next to
+the name shows which items have notes; hover it to read the latest, or
+click it to see them all. Notes also appear in each item’s detail
+panel.</li>
 </ul>
 <h3 id="improved">Improved</h3>
 <ul>
-<li><strong>Daily budgets are editable without selecting anything
-first.</strong> A “Daily Budgets” button now sits in the toolbar next to
-the ad group table’s Adjust Bids, and appears in the right-click menu
-and the Adjust menu. With nothing selected it edits every campaign in
-view; select two or more and it narrows to those.</li>
+<li><strong>Faster navigation.</strong> Going back is quicker, the
+campaign list keeps its place and revenue when you return, and opening a
+campaign no longer reloads every campaign. With the new API switched on,
+ad group and keyword numbers are ready the moment you open a campaign or
+ad group, instead of about a second later.</li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li><strong>Duplicating a campaign that has already run works
-again.</strong> Any copy of a live campaign was rejected outright for
-having a start date in the past. Copies now start from today, and run
-open-ended when the original’s schedule has already closed.</li>
-<li><strong>A brief connection problem no longer marks an account with a
-permanent sync error.</strong> A rate limit or a temporary outage was
-recorded as though your credentials had been refused, and nothing could
-clear it afterwards. Only an actual refusal counts now, a successful
-refresh clears the warning on its own, and the account shows what was
-reported back.</li>
-<li><strong>The custom product page you pick is the one you
-see.</strong> Choosing a custom product page in the New Ad or New Ad
-Group form left the screenshots below it showing the app’s default
-listing, so a second page looked like it had never loaded.</li>
+<li><strong>Deleted keywords no longer come back after a
+refresh.</strong></li>
+<li><strong>Ad groups on accounts that Apple moved to bid strategies
+work again.</strong> Creating an ad group or changing its bid was
+refused with “defaultBidAmount must be set to 0”, and these ad groups
+showed no bid.</li>
+<li><strong>Spend no longer shows $0 when it couldn’t be
+loaded.</strong> The menu bar now says the figure is unavailable
+instead.</li>
+<li><strong>Tables no longer draw their loading bars over the column
+headings.</strong></li>
+<li><strong>Double-clicking a row no longer opens it twice</strong>, so
+Back takes you where you expect.</li>
+<li><strong>The Promote screen no longer draws its ad group list over
+everything else.</strong> With more than a few ad groups, the list
+spilled out over the destination options, the search field, the bids and
+the “Negate at source” toggle. It now stays in its own box and
+scrolls.</li>
+<li><strong>Duplicating a Maximize Conversions campaign no longer
+renames its automatic ad group.</strong> The copy’s automatic ad group
+was always called “Automatic Ad Group”, whatever the original’s was
+called. It now keeps the original’s name, and new Maximize Conversions
+campaigns name it “Automated”, as Apple Ads does.</li>
 </ul>]]></description>
-      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/25/ADSwift.dmg"
+      <enclosure url="https://github.com/SaadBelfqih/adswift-releases/releases/download/26/ADSwift.dmg"
                  type="application/octet-stream"
-                 sparkle:edSignature="2/rQbtWp4TzmYCe/kVCVv1KHqoSdm2/jkE2q8r6LU8iUbOPMQDW3mdbbp5TocQUfG2iXgL731ZX49OSQKScYDQ=="
-                 length="25568951"/>
+                 sparkle:edSignature="oXhm0+C43utXcJlC9i3uXp/qY3qkGSuy9Nnak8vhhrWmLAutjS0VcNGbEfHQV0vs+MAEQ+wkyLxr/fQgGSuHDg=="
+                 length="27365031"/>
     </item>
   </channel>
 </rss>
